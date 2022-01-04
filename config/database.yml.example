@@ -1,0 +1,21 @@
+default: &default
+  adapter: mysql2
+  encoding: utf8
+  pool: 5
+  username: root
+  password: *your mysql password*
+  socket: /var/run/mysqld/mysqld.sock
+
+development:
+  <<: *default
+  database: food_and_drink_development
+
+test:
+  <<: *default
+  database: food_and_drink_test
+
+production:
+  <<: *default
+  database: food_and_drink_production
+  username: root
+  password: ENV["MYSQL_PASSWORD"]
