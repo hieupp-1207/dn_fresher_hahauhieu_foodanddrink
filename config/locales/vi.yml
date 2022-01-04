@@ -13,6 +13,12 @@ vi:
       free_ship: "Miễn phí ship cho tất cả đơn hàng trên 250k"
       cart: "Giỏ hàng"
       shop: "Cửa hàng"
+    all_products:
+      add: "Thêm"
+      price: "Giá: %{price} VNĐ"
+      quantity: "Số lượng: %{quantity}"
+      rating: "Đánh giá: %{rating}"
+      all_products: "Tất cả sản phẩm"
     footer:
       address: "Địa chỉ: 16 Lý Thường Kiệt"
       phone: "SĐT: +65 11.188.888"
@@ -39,14 +45,12 @@ vi:
       shop_now: "MUA NGAY"
       fresh_meat: "Thịt đỏ"
       newest_products: "Sản phẩm mới nhất"
-      add: "Thêm"
-      price: "Giá: %{price} VNĐ"
-      quantity: "Số lượng: %{quantity}"
-      rating: "Đánh giá: %{rating}"
-      all_products: "Tất cả sản phẩm"
   hello: "Hello world"
   log_in: "Đăng nhập"
   sign_up: "Đăng ký"
+  hello: "Hello world"
+  sign_up: "Đăng ký"
+  log_in: "Đăng nhập"
   sessions:
     new:
       email_req: "Định dạng email bắt buộc: ex@abc.xyz"
@@ -80,3 +84,23 @@ vi:
   carts:
     create:
       add_success: "Thêm sản phẩm thành công"
+  admin:
+    layouts:
+      header:
+        english: "Tiếng Anh"
+        vietnamese: "Tiếng Việt"
+        profile: "Hồ sơ"
+        log_out: "Đăng xuất"
+      sidebar:
+        welcome: "Xin chào, "
+        product: "Sản phẩm"
+        category: "Danh mục"
+        order: "Đơn hàng"
+        user: "Người dùng"
+      footer:
+        footer_admin: "© 2020 Copyright: OganiFood.com"
+    static_pages:
+      home:
+        admin_page_title: "Quản lý"
+        hello_admin: "Chào boss!"
+        forbiden: "Bạn cần quyền admin để truy cập trang này!"

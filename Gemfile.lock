@@ -131,6 +131,8 @@ GEM
     ffi (1.15.4)
     figaro (1.2.0)
       thor (>= 0.14.0, < 2)
+    font-awesome-rails (4.7.0.8)
+      railties (>= 3.2, < 8.0)
     globalid (1.0.0)
       activesupport (>= 5.0)
     i18n (1.8.11)
@@ -316,6 +318,7 @@ DEPENDENCIES
   config
   faker
   figaro
+  font-awesome-rails
   i18n-js
   jbuilder (~> 2.7)
   jquery-rails
