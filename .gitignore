@@ -63,3 +63,5 @@ config/credentials.yml.enc
 spec/
 
 test/
+
+db/schema.rb
