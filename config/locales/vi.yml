@@ -1,1 +1,40 @@
 vi:
+  title: ""
+  layouts:
+    header:
+      home: "Trang chủ"
+      contact: "Liên hệ"
+      login: "Đăng nhập"
+      english: "Tiếng Anh"
+      vietnamese: "Tiếng Việt"
+      pages: "Tới trang"
+      shopping_cart: "Giỏ hàng"
+      checkout: "Thanh toán"
+      free_ship: "Miễn phí ship cho tất cả đơn hàng trên 250k"
+      cart: "Giỏ hàng"
+      shop: "Cửa hàng"
+    footer:
+      address: "Địa chỉ: 16 Lý Thường Kiệt"
+      phone: "SĐT: +65 11.188.888"
+      email: "Email: hello@colorlib.com"
+      links: "Xem thêm"
+      copyright: "Copyright"
+      payment_cart: " Thanh toán qua thẻ: "
+      about_us: "Về chúng tôi"
+      about_shop: "Thông tin shop"
+      security_shop: "Mua sắm an toàn"
+      delivery_info: "Giao hàng"
+      privacy_policy: "Chính sách riêng"
+
+  static_pages:
+    home:
+      home: "Trang chủ"
+      all_categories: "Tất cả danh mục"
+      search: "TÌM KIẾM"
+      support: "Hỗ trợ 24/7"
+      fresh_fruit: "TRÁI CÂY TƯƠI"
+      vegetable: "Rau củ"
+      organic: "100% tự nhiêns"
+      free_ship: "Nhận và giao hàng miễn phí"
+      shop_now: "MUA NGAY"
+      fresh_meat: "Thịt đỏ"

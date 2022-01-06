@@ -1,0 +1,73 @@
+<header class="header">
+  <div class="header__top">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-6 col-md-6">
+          <div class="header__top__left">
+            <ul>
+              <li><i class="bi bi-envelope-fill"></i> hello@colorlib.com</li>
+              <li><%= t ".free_ship" %></li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-lg-6 col-md-6">
+          <div class="header__top__right">
+            <div class="header__top__right__social">
+              <%= link_to "#" do %><i class="fa fa-envelope"></i><% end %>
+              <%= link_to "#" do %><i class="fa fa-twitter"></i><% end %>
+              <%= link_to "#" do %><i class="fa fa-linkedin"></i><% end %>
+            </div>
+            <div class="header__top__right__language">
+              <%= image_tag "language.png" %>
+              <div><%= t ".english" %></div>
+              <span class="arrow_carrot-down"></span>
+              <ul>
+                <%= link_to t(".english"), locale: :en %>
+                <%= link_to t(".vietnamese"), locale: :vi %>
+              </ul>
+            </div>
+            <div class="header__top__right__auth">
+              <%= link_to "#" do %><i class="fa fa-user"></i><%= t(".login") %><% end %>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-3">
+        <div class="header__logo">
+          <%= link_to home_path do %>
+            <%= image_tag "logo.png" %>
+          <% end %>
+        </div>
+      </div>
+      <div class="col-lg-6">
+        <nav class="header__menu">
+          <ul>
+            <li class="active"><%= link_to t(".home"), "#" %></li>
+            <li><%= link_to t(".shop"), "#" %></li>
+            <li><%= link_to t(".pages"), "#" %>
+              <ul class="header__menu__dropdown">
+                <li><%= link_to t(".shopping_cart"), "#" %></li>
+                <li><%= link_to t(".checkout"), "#" %></li>
+              </ul>
+            </li>
+            <li><%= link_to t(".contact"), "#" %></li>
+          </ul>
+        </nav>
+      </div>
+      <div class="col-lg-3">
+        <div class="header__cart">
+          <ul>
+            <li>
+              <%= link_to "#" do %><i class="fa fa-shopping-bag">Cart</i><span>3</span><% end %>
+            </li>
+          </ul>
+          <div class="header__cart__price">item: <span>$150.00</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>

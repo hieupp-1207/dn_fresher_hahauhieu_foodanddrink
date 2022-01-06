@@ -1,8 +1,9 @@
 class ApplicationController < ActionController::Base
-  include Pagy::Backend
   before_action :set_locale
+  include Pagy::Backend
 
   private
+
   def set_locale
     I18n.locale = params[:locale] || I18n.default_locale
     check_locales = I18n.available_locales.include?(locale)
