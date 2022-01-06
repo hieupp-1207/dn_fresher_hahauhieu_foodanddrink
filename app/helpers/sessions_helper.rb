@@ -15,4 +15,14 @@ module SessionsHelper
     session.delete :user_id
     @current_user = nil
   end
+
+  def add_food_to_cart product_id, quantity
+    quantity_card = current_cart[product_id.to_sym] || 0
+    quantity_card += quantity
+    current_cart[product_id.to_sym] = quantity_card
+  end
+
+  def current_cart
+    @current_cart ||= session[:cart]
+  end
 end

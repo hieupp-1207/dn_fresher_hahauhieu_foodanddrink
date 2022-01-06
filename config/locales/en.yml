@@ -54,3 +54,4 @@ en:
       login_fail: "Login fail!!!"
   errors:
     not_found: "Not Found!!!"
+    not_found_product: "Not Found Product!!!"
