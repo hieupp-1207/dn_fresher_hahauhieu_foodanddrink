@@ -45,6 +45,7 @@ vi:
       rating: "Đánh giá: %{rating}"
       all_products: "Tất cả sản phẩm"
   hello: "Hello world"
+  log_in: "Đăng nhập"
   sign_up: "Đăng ký"
   sessions:
     new:
@@ -61,6 +62,7 @@ vi:
   errors:
     not_found: "Không tìm thấy!!!"
     not_found_product: "Không tìm thấy sản phẩm!!!"
+    not_enough: "Không đủ hàng trong kho"
   pagy:
     nav:
       prev: "Trước"
@@ -73,3 +75,8 @@ vi:
       quantity: "Số lượng: %{quantity}"
       rating: "Đánh giá: %{rating}"
       all_products: "Tất cả sản phẩm"
+    show:
+      add_cart: "Thêm vào giỏ hàng"
+  carts:
+    create:
+      add_success: "Thêm sản phẩm thành công"

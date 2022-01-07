@@ -1,17 +1,20 @@
 class CartsController < ApplicationController
-  before_action :load_product, only: :create
+  before_action :load_product, :check_quantity, only: :create
 
   def create
-    add_food_to_cart(params[:product_id], params[:quantity]) if check_quantity?
-    respond_to do |format|
-      format.js
-    end
+    add_food_to_cart params[:product_id], params[:quantity]
+    flash[:success] = t ".add_success"
+    redirect_to product_path params[:product_id]
   end
 
   private
 
-  def check_quantity?
-    @product.quantity >= params[:quantity].to_i
+  def check_quantity
+    quantity_card = current_cart[params[:product_id]] || 0
+    return if @product.quantity >= (params[:quantity].to_i + quantity_card.to_i)
+
+    flash[:danger] = t "errors.not_enough"
+    redirect_to product_path params[:product_id]
   end
 
   def load_product

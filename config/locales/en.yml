@@ -73,3 +73,8 @@ en:
       quantity: "Quantity: %{quantity}"
       rating: "Rating: %{rating}"
       all_products: "All products"
+    show:
+      add_cart: "ADD TO CART"
+  carts:
+    create:
+      add_success: "Add successful products"
