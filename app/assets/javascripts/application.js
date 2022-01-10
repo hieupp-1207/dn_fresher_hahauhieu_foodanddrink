@@ -1,17 +1,12 @@
-//= require i18n
-//= require i18n.js
-//= require i18n/translations
-//= require jquery3
-//= require popper
-//= require bootstrap-sprockets
 
-import Rails from "@rails/ujs"
 
-import Turbolinks from "turbolinks"
+import Rails from '@rails/ujs'
 
-import * as ActiveStorage from "@rails/activestorage"
+import Turbolinks from 'turbolinks'
 
-import "channels"
+import * as ActiveStorage from '@rails/activestorage'
+
+import 'channels'
 
 import 'bootstrap'
 

@@ -311,7 +311,7 @@ DEPENDENCIES
   jbuilder (~> 2.7)
   jquery-rails
   listen (~> 3.3)
-  mysql2
+  mysql2 (~> 0.5.3)
   pagy
   puma (~> 5.0)
   rack-mini-profiler (~> 2.0)
