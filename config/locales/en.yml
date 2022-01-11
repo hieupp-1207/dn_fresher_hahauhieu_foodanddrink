@@ -1,5 +1,5 @@
 en:
-  title: ""
+  title: "OGANI"
   layouts:
     header:
       home: "Home"
@@ -38,6 +38,12 @@ en:
       free_ship: "Free Pickup and Delivery Available"
       shop_now: "SHOP NOW"
       fresh_meat: "Fresh Meat"
+      newest_products: "Newest products"
+      add: "Add"
+      price: "Price: %{price} VNĐ"
+      quantity: "Quantity: %{quantity}"
+      rating: "Rating: %{rating}"
+      all_products: "All products"
   hello: "Hello world"
   sign_up: "Sign Up"
   sessions:
@@ -54,3 +60,16 @@ en:
       login_fail: "Login fail!!!"
   errors:
     not_found: "Not Found!!!"
+    not_found_product: "Not Found Product!!!"
+  pagy:
+    nav:
+      prev: "Prev"
+      next: "Next"
+  products:
+    index:
+      products: "Products"
+      add: "Add"
+      price: "Price: $%{price}"
+      quantity: "Quantity: %{quantity}"
+      rating: "Rating: %{rating}"
+      all_products: "All products"

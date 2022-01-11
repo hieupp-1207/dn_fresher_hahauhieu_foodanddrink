@@ -1,5 +1,5 @@
 vi:
-  title: ""
+  title: "OGANI"
   layouts:
     header:
       home: "Trang chủ"
@@ -38,6 +38,12 @@ vi:
       free_ship: "Nhận và giao hàng miễn phí"
       shop_now: "MUA NGAY"
       fresh_meat: "Thịt đỏ"
+      newest_products: "Sản phẩm mới nhất"
+      add: "Thêm"
+      price: "Giá: %{price} VNĐ"
+      quantity: "Số lượng: %{quantity}"
+      rating: "Đánh giá: %{rating}"
+      all_products: "Tất cả sản phẩm"
   hello: "Hello world"
   sign_up: "Đăng ký"
   sessions:
@@ -54,3 +60,16 @@ vi:
       login_fail: "Đăng nhập thất bại!!!"
   errors:
     not_found: "Không tìm thấy!!!"
+    not_found_product: "Không tìm thấy sản phẩm!!!"
+  pagy:
+    nav:
+      prev: "Trước"
+      next: "Sau"
+  products:
+    index:
+      products: "Sản phẩm"
+      add: "Thêm"
+      price: "Giá: %{price} vnđ"
+      quantity: "Số lượng: %{quantity}"
+      rating: "Đánh giá: %{rating}"
+      all_products: "Tất cả sản phẩm"

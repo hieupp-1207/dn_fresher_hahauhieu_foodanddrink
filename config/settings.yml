@@ -3,3 +3,6 @@ length:
   password: 6
 format:
   VALID_EMAIL_REGEX: !ruby/regexp /\A[\w+\-.]+@[a-z\d\-.]+\.[a-z]+\z/i
+number:
+  digit_12: 12
+  digit_8: 8

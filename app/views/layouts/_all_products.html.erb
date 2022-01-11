@@ -1,0 +1,21 @@
+<h2 class="text-center mb-5 mt-5"><%= yield :product_title %></h2>
+<div class="row featured__filter mb-5">
+  <% @products.each do |product| %>
+    <div class="col-lg-3 col-md-4 col-sm-6 mix oranges fresh-meat">
+      <div class="featured__item">
+        <div class="featured__item__pic set-bg">
+          <%= image_tag  product.image, class: "featured__item__pic set-bg" %>
+          <ul class="featured__item__pic__hover">
+              <li><%= link_to t(".add"), "#" %></li>
+          </ul>
+        </div>
+        <div class="featured__item__text">
+          <h6><a href="#"><%= link_to product.name %></a></h6>
+          <h5><%= t(".price", price: product.price)%></h5>
+          <h5><%= t(".quantity", quantity: product.quantity)%></h5>
+          <h5><%= t(".rating", rating: product.rating)%></h5>
+        </div>
+      </div>
+    </div>
+  <% end %>
+</div>
