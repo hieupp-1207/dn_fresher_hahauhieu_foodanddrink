@@ -34,7 +34,23 @@ vi:
       support: "Hỗ trợ 24/7"
       fresh_fruit: "TRÁI CÂY TƯƠI"
       vegetable: "Rau củ"
-      organic: "100% tự nhiêns"
+      organic: "100% tự nhiên"
       free_ship: "Nhận và giao hàng miễn phí"
       shop_now: "MUA NGAY"
       fresh_meat: "Thịt đỏ"
+  hello: "Hello world"
+  sign_up: "Đăng ký"
+  sessions:
+    new:
+      email_req: "Định dạng email bắt buộc: ex@abc.xyz"
+      password_req: "Mật khẩu không được để trống"
+      password: "Mật khẩu"
+      email: "Email"
+      remember_me: "Lưu thông tin"
+      forgot_password: "Quên mật khẩu?"
+      logout: "Đăng xuất"
+    create:
+      login_success: "Đăng nhập thành công!!!"
+      login_fail: "Đăng nhập thất bại!!!"
+  errors:
+    not_found: "Không tìm thấy!!!"

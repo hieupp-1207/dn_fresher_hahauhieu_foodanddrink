@@ -38,3 +38,19 @@ en:
       free_ship: "Free Pickup and Delivery Available"
       shop_now: "SHOP NOW"
       fresh_meat: "Fresh Meat"
+  hello: "Hello world"
+  sign_up: "Sign Up"
+  sessions:
+    new:
+      email: "Email"
+      email_req: "Valid email is required: ex@abc.xyz"
+      password: "Password"
+      password_req: "Password is required"
+      remember_me: "Remember Me"
+      forgot_password: "Forgot Password?"
+      logout: "Logout"
+    create:
+      login_success: "Login success!!!"
+      login_fail: "Login fail!!!"
+  errors:
+    not_found: "Not Found!!!"
