@@ -2,7 +2,7 @@ class SessionsController < ApplicationController
   def new; end
 
   def create
-    user = User.find_by email: params[:session][:email]
+    user = User.find_by email: params[:session][:email].downcase
     if user&.authenticate params[:session][:password]
       flash[:success] = t ".login_success"
       log_in user

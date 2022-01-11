@@ -54,3 +54,4 @@ vi:
       login_fail: "Đăng nhập thất bại!!!"
   errors:
     not_found: "Không tìm thấy!!!"
+    not_found_product: "Không tìm thấy sản phẩm!!!"
