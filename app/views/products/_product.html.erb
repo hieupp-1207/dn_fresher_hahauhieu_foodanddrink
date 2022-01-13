@@ -17,6 +17,8 @@
     <%= t(".price_product", price: product.price * current_cart[product.id.to_s].to_i) %>
   </td>
   <td class="shoping__cart__item__close">
-    <span class="icon_close"></span>
+    <%= button_to cart_path(id: product.id), method: :delete do %>
+      <span class="icon_close"></span>
+    <% end %>
   </td>
 </tr>

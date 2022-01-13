@@ -10,7 +10,7 @@
           </ul>
         </div>
         <div class="featured__item__text">
-          <h6><a href="#"><%= link_to product.name %></a></h6>
+          <h6><%= link_to product.name, product_path(product.id) %></h6>
           <h5><%= t(".price", price: product.price)%></h5>
           <h5><%= t(".quantity", quantity: product.quantity)%></h5>
           <h5><%= t(".rating", rating: product.rating)%></h5>
