@@ -16,7 +16,9 @@ Rails.application.routes.draw do
     namespace :admin do
       root "static_pages#home"
       resources :products, only: :index
-      resources :orders, only: :index
+      resources :orders, only: [:index, :update] do
+        resources :order_details, only: :index
+      end
     end
   end
 end

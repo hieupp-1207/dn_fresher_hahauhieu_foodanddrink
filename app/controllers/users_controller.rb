@@ -1,7 +1,5 @@
 class UsersController < ApplicationController
-  before_action :logged_in_user, except: %i(new create)
-  before_action :correct_user, only: %i(edit update show)
-  before_action :find_user, except: %i(new create index)
+  before_action :logged_in_user, :correct_user, :find_user, only: :show
 
   def show
     @pagy, @user_orders = pagy(@user.orders.sort_orders,

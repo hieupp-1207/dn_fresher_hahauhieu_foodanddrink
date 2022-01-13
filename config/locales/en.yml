@@ -21,6 +21,7 @@ en:
       history: "History"
       settings: "Settings"
       support: "Support"
+      language: "Language"
     footer:
       address: "Address: 16 Ly Thuong Kiet"
       phone: "Phone: +65 11.188.888"
@@ -81,6 +82,23 @@ en:
     nav:
       prev: "Prev"
       next: "Next"
+  products:
+    index:
+      list_products: "List products"
+      products_management: "Products Management"
+      list_products_empty: "List products empty"
+      action: "Action"
+      number: "Number"
+      name: "Name"
+      price: "Price ($)"
+      quantity: "Quantity"
+      rating: "Rating"
+      products: "Products"
+      all_products: "All products"
+    show:
+      add_cart: "ADD TO CART"
+    product:
+      price_product: "%{price} VNĐ"
   carts:
     create:
       add_success: "Add successful products"
@@ -110,6 +128,7 @@ en:
         vietnamese: "Vietnamese"
         profile: "Profile"
         log_out: "Log Out"
+        language: "Language"
       sidebar:
         welcome: "Welcome, "
         product: "Product"
@@ -118,6 +137,8 @@ en:
         user: "User"
       footer:
         footer_admin: "© 2020 Copyright: OganiFood.com"
+    all_products:
+      price: "$%{price}"
     orders:
       index:
         list_orders_empty: "List order is empty!"
@@ -153,6 +174,23 @@ en:
     product:
       price_product: "%{price} VNĐ"
       delete_item: "Are you sure?"
+    order_details:
+      index:
+        not_found_order: "Not Found This Order!"
+        update: "update"
+        status: "Status:     "
+        order_details: "Order details"
+        user_name: "Fullname:  "
+        phone: "Phone:  "
+        adress: "Adress:  "
+        email: "Email:  "
+        created_at: "Created date:  "
+        close: "Close"
+    static_pages:
+      home:
+        admin_page_title: "Admin"
+        hello_admin: "Hello admin!"
+        forbiden: "You need administrator's permission to access this page!"
   users:
     show:
       history_orders: "History orders"
@@ -161,8 +199,6 @@ en:
       created_at: "Create at"
       total_price: "Total price ($)"
       action: "Action"
-    history_order:
-      total_price: "$%{total_price}"
   time:
     formats:
       default: "%Y-%m-%d"

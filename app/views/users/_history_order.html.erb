@@ -3,7 +3,7 @@
     <td><%= serial params[:page], i %></td>
     <td><%= user_order.status_i18n %></td>
     <td><%= l(user_order.created_at, format: :default) %></td>
-    <td><%= t(".total_price",total_price: user_order.total_price) %></td>
+    <td><%= number_to_currency(user_order.total_price) %></td>
     <td style="width: 2rem" class="d-flex text-center">
     <%= link_to url_for("#"), role:"button", class:"mr-4" do %>
       <i class="fa fa-eye text-secondary" style="font-size:20px"></i>

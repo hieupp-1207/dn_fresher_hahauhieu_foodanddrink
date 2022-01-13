@@ -1,0 +1,75 @@
+
+<%= provide :title, t(".order_details") %>
+<div class="container-fluid my-font text-dark">
+  <h1 style="color:#7FAD39" class="my-font text-center">
+    <%= t ".order_details" %>
+  </h2>
+  <hr class="style5">
+  <div class="table-responsive-lg">
+    <table style="width: 100%">
+      <tbody style="font-size: 20px">
+        <tr>
+          <td class="text-start">
+            <%= t ".user_name" %><%= @order.user_fullname %>
+          </td>
+          <td class="text-end">
+            <%= t ".phone" %><%= @order.phone %>
+          </td>
+        </tr>
+        <tr>
+          <td class="text-start">
+            <%= t ".adress" %><%= @order.address %>
+          </td>
+          <td class="text-end">
+            <%= t ".email" %><%= @order.user_email %>
+          </td>
+        </tr>
+        <tr>
+          <td class="text-start">
+            <%= form_tag class:"form-inline d-flex" do %>
+              <div class="form-group mb-2">
+                <%= t ".status", class:"sr-only" %>
+                <%= select_tag :status, options_for_select(Order.statuses,
+                  selected: Order.statuses[@order.status]), style:"width: 100px",
+                  class:"form-control-plaintext d-inline btn-outline-info" %>
+                <%= submit_tag t(".update"), class: "btn btn-warning mb-2" %>
+              </div>
+            <% end %>
+          </td>
+          <td class="text-end">
+            <%= t ".created_at" %><%= l(@order.created_at, format: :default) %>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <hr class="style5">
+  <div class="table-responsive">
+    <table style="width: 100%" class="align-items-center">
+      <thead style="font-size: 22px">
+        <tr>
+          <th style="width: 50%"><%= t ".food_name" %></th>
+          <th style="width: 15%;"><%= t ".order_quantity" %></th>
+          <th style="width: 20%;"><%= t ".product_price" %></th>
+          <th style="width: 20%"><%= t ".total_price_item" %></th>
+        </tr>
+      </thead>
+      <tbody>
+        <%= render "shared/order_detail" %>
+      </tbody>
+    </table>
+  </div>
+  <hr class="style5">
+  <div class="row">
+    <div class="col-lg-6 text-lg-left text-danger" style="font-size: 20px">
+      <%= t ".total_price" %>
+    </div>
+    <div class="col-lg-6 text-lg-right text-danger" style="font-size: 20px">
+      <%= number_to_currency(@order.total_price) %>
+    </div>
+  </div>
+  <div class="float-lg-right mt-lg-4">
+    <%= link_to t(".close"), admin_orders_path, class:"btn",
+     style:"background-color:#7FAD39" %>
+  </div>
+</div>
