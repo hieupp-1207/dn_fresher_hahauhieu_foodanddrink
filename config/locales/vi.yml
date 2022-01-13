@@ -127,3 +127,22 @@ vi:
       rating: "Đánh giá"
     all_products:
       price: "%{price} vnđ"
+    orders:
+      index:
+        list_orders_empty: "List order is empty!"
+        list_orders: "Order list"
+        user_name: "Họ tên"
+        user_email: "Email"
+        address: "Địa chỉ"
+        phone: "SĐT"
+        status: "Trạng thái"
+        created_at: "Ngày tạo đơn"
+        total_price: "Thành tiền"
+        action: "Chức năng"
+        order_management: "Quản lý đơn hàng"
+        number: "STT"
+    static_pages:
+      home:
+        admin_page_title: "Quản lý"
+        hello_admin: "Chào boss!"
+        forbiden: "Bạn cần quyền admin để truy cập trang này!"

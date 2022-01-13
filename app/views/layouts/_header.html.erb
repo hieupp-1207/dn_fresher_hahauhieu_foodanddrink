@@ -53,7 +53,7 @@
           <% end %>
         </div>
       </div>
-      <div class="col-lg-9">
+      <div class="col-lg-6">
         <nav class="header__menu">
           <ul>
             <li class="active"><%= link_to t(".home"), root_path %></li>
@@ -73,7 +73,7 @@
           <ul>
             <li>
               <%= link_to "#" do %>
-                <i class="bi bi-cart4"></i>
+                <i class="bi bi-cart4" style="font-size: 25px"></i>
               <% end %>
             </li>
           </ul>
@@ -84,9 +84,7 @@
       <div class="col-lg-3">
         <div class="hero__categories">
           <div class="hero__categories__all">
-            <i class="bi bi-list"></i>
             <span><%= t ".all_categories" %></span>
-            <i class="bi bi-arrow-down"></i>
           </div>
         </div>
       </div>
@@ -100,7 +98,7 @@
           </div>
           <div class="hero__search__phone">
             <div class="hero__search__phone__icon">
-              <i class="fa fa-phone"></i>
+              <i class="fa fa-phone text-dark text-center"></i>
             </div>
             <div class="hero__search__phone__text">
               <h5><%= Settings.header.phone %></h5>
