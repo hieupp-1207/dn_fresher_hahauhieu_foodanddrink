@@ -6,3 +6,6 @@ format:
 number:
   digit_12: 12
   digit_8: 8
+header:
+  email: "hahieuhau@gmail.com"
+  phone: "+65 11.188.888"
