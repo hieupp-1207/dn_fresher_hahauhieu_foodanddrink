@@ -34,13 +34,22 @@ module SessionsHelper
     @current_cart ||= session[:cart]
   end
 
+  def subtotal products
+    products.reduce(0) do |sum, item|
+      sum + total_item(item)
+    end
+  end
+
   def load_products_in_cart
     current_cart.keys
   end
 
-  def subtotal products
-    products.reduce(0) do |sum, item|
-      sum + item.price * current_cart[item.id.to_s]
-    end
+  def redirect_back_or default
+    redirect_to(session[:forwarding_url] || default)
+    session.delete :forwarding_url
   end
+
+  def total_item product
+    (product.price * current_cart[product.id.to_s].to_i).round(2)
+  end 
 end

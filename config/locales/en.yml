@@ -39,9 +39,6 @@ en:
       price: "Price: $%{price}"
       quantity: "Quantity: %{quantity}"
       rating: "Rating: %{rating}"
-    show_cart:
-      price_product: "%{price} VNĐ"
-      reset_cart: "Are you sure?"
   static_pages:
     home:
       all_categories: "All categories"
@@ -84,6 +81,8 @@ en:
       next: "Next"
   products:
     index:
+      products: "Products"
+      all_products: "All products"
       list_products: "List products"
       products_management: "Products Management"
       list_products_empty: "List products empty"
@@ -95,6 +94,8 @@ en:
       rating: "Rating"
       products: "Products"
       all_products: "All products"
+    all_products:
+      price: "$%{price}"
     show:
       add_cart: "ADD TO CART"
     product:
@@ -209,3 +210,20 @@ en:
         accept: "Accept"
         delivered: "Delivered"
         cancel: "Cancel"
+  orders:
+    product_deleted: "%{count} product does not exist"
+    invalid_quantity: "%{names} not enough quantity in the system"
+    new:
+      detail: "Billing Details"
+      fullname: "Fullname"
+      phone: "Phone"
+      address: "Address"
+      order: "YOUR ORDER"
+      product: "Products"
+      total: "Total"
+      subtotal: "Subtotal"
+      checkout: "Checkout"
+      please_buy_item: "Please add product to cart"
+    create:
+      failed: "Order failed. Please check and try again!"
+      success: "Your order has been successfully placed!"

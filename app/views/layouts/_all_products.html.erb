@@ -6,12 +6,12 @@
         <div class="featured__item__pic set-bg">
           <%= image_tag  product.image, class: "featured__item__pic set-bg" %>
           <ul class="featured__item__pic__hover">
-              <li><%= link_to t(".add"), "#" %></li>
+            <li><%=button_to t(".add"), carts_path(product_id: product.id, quantity: 1), method: :post  %></li>
           </ul>
         </div>
         <div class="featured__item__text">
           <h6><%= link_to product.name, product_path(product.id) %></h6>
-          <h5><%= t(".price", price: product.price)%></h5>
+          <h5><%= t(".price", price: (product.price).round(2))%></h5>
           <h5><%= t(".quantity", quantity: product.quantity)%></h5>
           <h5><%= t(".rating", rating: product.rating)%></h5>
         </div>

@@ -1,0 +1,38 @@
+<section class="checkout spad">
+  <div class="container">
+    <div class="checkout__form">
+      <h4><%= t(".detail") %></h4>
+      <%= form_tag orders_path do %>
+        <div class="row">
+          <div class="col-lg-8 col-md-6">
+            <div class="checkout__input">
+              <p><%= t(".fullname") %></p>
+              <%= text_field_tag :fullname, @current_user.fullname , required: "required" %>
+            </div>
+            <div class="checkout__input">
+              <p><%= t(".phone") %></p>
+              <%= text_field_tag :phone, @current_user.phone , required: "required" %>
+            </div>
+            <div class="checkout__input">
+              <p><%= t(".address") %></p>
+              <%= text_field_tag :address, @current_user.address , required: "required" %>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6">
+            <div class="checkout__order">
+              <h4><%= t(".order") %></h4>
+              <div class="checkout__order__products"><%= t(".product") %><span><%= t(".total") %></span></div>
+              <ul>
+                <% @products.each do |product| %>
+                  <li><%= product.name %><span><%= total_item product %></span></li>
+                <% end %>
+              </ul>
+              <div class="checkout__order__subtotal"><%= t(".subtotal") %><span><%= @subtotal_in_cart.round(2) %></span></div>
+              <%= submit_tag t(".checkout"), class: "site-btn" %>
+            </div>
+          </div>
+        </div>
+      <% end %>
+    </div>
+  </div>
+</section>

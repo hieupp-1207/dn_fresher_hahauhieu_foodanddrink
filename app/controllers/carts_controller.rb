@@ -5,7 +5,7 @@ class CartsController < ApplicationController
   def create
     add_product_to_cart params[:product_id], params[:quantity]
     flash[:success] = t ".add_success"
-    redirect_to product_path params[:product_id]
+    redirect_to root_path
   end
 
   def index
