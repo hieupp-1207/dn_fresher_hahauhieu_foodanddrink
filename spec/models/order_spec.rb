@@ -2,15 +2,15 @@ require "rails_helper"
 require "support/factory_bot"
 
 RSpec.describe Order, type: :model do
-  subject {create :order}
+  subject {create(:order)}
 
   context "has a valid factory" do
     it {expect(subject).to be_valid}
     it {is_expected.to validate_presence_of(:address)}
     it {is_expected.to validate_presence_of(:phone)}
   end
-
-  describe "status as an enums" do
+  
+  describe "define status as an enum" do
     it {is_expected.to define_enum_for(:status).
       with([:pending, :rejected, :accept, :delivered])}
   end
