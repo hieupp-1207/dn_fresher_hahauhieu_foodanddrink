@@ -17,13 +17,12 @@ class OrdersController < ApplicationController
     ActiveRecord::Base.transaction do
       @order.save!
     end
-  rescue ActiveRecord::RecordInvalid
-    flash[:danger] = t ".failed"
-    redirect_to carts_path
-  else
     current_cart.clear
     flash[:success] = t ".success"
     redirect_to root_path
+  rescue ActiveRecord::RecordInvalid
+    flash[:danger] = t ".failed"
+    redirect_to carts_path
   end
 
   def show
@@ -50,6 +49,8 @@ class OrdersController < ApplicationController
         price: product.price * quantity.to_i,
         product_id: product_id
       )
+      remain_quantity = product.quantity - quantity
+      product.update! quantity: remain_quantity
     end
   end
 

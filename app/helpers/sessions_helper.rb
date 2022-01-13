@@ -52,4 +52,8 @@ module SessionsHelper
   def total_item product
     (product.price * current_cart[product.id.to_s].to_i).round(2)
   end
+
+  def handle_price product
+    (product.price).round(2)
+  end
 end
