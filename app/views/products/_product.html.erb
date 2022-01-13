@@ -1,0 +1,22 @@
+<tr>
+  <td class="shoping__cart__item">
+    <%= image_tag "cart-1.jpg" %>
+    <h5><%= product.name %></h5>
+  </td>
+  <td class="shoping__cart__price">
+    <%= t(".price_product", price: product.price) %>
+  </td>
+  <td class="shoping__cart__quantity">
+    <div class="quantity">
+        <div class="pro-qty">
+            <input type="text" value= <%= current_cart[product.id.to_s] %> >
+        </div>
+    </div>
+  </td>
+  <td class="shoping__cart__total">
+    <%= t(".price_product", price: product.price * current_cart[product.id.to_s].to_i) %>
+  </td>
+  <td class="shoping__cart__item__close">
+    <span class="icon_close"></span>
+  </td>
+</tr>

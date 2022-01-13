@@ -46,6 +46,9 @@ vi:
       shop_now: "MUA NGAY"
       fresh_meat: "Thịt đỏ"
       newest_products: "Sản phẩm mới nhất"
+      admin_page_title: "Quản lý"
+      hello_admin: "Chào boss!"
+      forbiden: "Bạn cần quyền admin để truy cập trang này!"
   hello: "Hello world"
   log_in: "Đăng nhập"
   sign_up: "Đăng ký"
@@ -78,9 +81,26 @@ vi:
       all_products: "Tất cả sản phẩm"
     show:
       add_cart: "Thêm vào giỏ hàng"
+    product:
+      price_product: "%{price} VNĐ"
   carts:
     create:
       add_success: "Thêm sản phẩm thành công"
+    index:
+      products: "SẢN PHẨM"
+      price: "GIÁ"
+      quantity: "SỐ LƯỢNG"
+      total: "THÀNH TIỀN"
+      continue_shopping: "TIẾP TỤC MUA HÀNG"
+      update_cart: "CÂP NHẬT"
+      discount_code: "MÃ KHUYẾN MÃI"
+      apply_coupon: "ÁP DỤNG"
+      cart_total: "TỔNG TIỀN"
+      subtotal: "TẠM TÍNH"
+      total: "TỔNG CỘNG"
+      checkout: "THANH TOÁN"
+      cart: "GIỎ HÀNG"
+      placeholder_code: "Nhập mã giảm giá"
   admin:
     layouts:
       header:
@@ -96,8 +116,3 @@ vi:
         user: "Người dùng"
       footer:
         footer_admin: "© 2020 Copyright: OganiFood.com"
-    static_pages:
-      home:
-        admin_page_title: "Quản lý"
-        hello_admin: "Chào boss!"
-        forbiden: "Bạn cần quyền admin để truy cập trang này!"

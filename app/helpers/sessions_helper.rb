@@ -16,7 +16,7 @@ module SessionsHelper
     @current_user = nil
   end
 
-  def add_food_to_cart product_id, quantity
+  def add_product_to_cart product_id, quantity
     quantity_card = current_cart[product_id] || 0
     quantity_card += quantity.to_i
     current_cart[product_id] = quantity_card.to_i
@@ -24,5 +24,14 @@ module SessionsHelper
 
   def current_cart
     @current_cart ||= session[:cart]
+  end
+  
+  def load_products_in_cart
+    current_cart.keys
+  end
+
+  def subtotal products
+    products.reduce(0) do |sum, item| 
+                          sum + item.price * current_cart[item.id.to_s]; end
   end
 end
