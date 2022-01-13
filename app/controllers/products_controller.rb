@@ -3,7 +3,11 @@ class ProductsController < ApplicationController
 
   def index
     products = Product.search(params[:term]).newest
-    @pagy, @products = pagy products, items: Settings.number.digit_12
+    if products.empty?
+      flash[:danger] = t ".errors.not_found_product"
+    else
+      @pagy, @products = pagy products, items: Settings.number.digit_12
+    end
   end
 
   def show; end

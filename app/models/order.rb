@@ -4,6 +4,8 @@ class Order < ApplicationRecord
   belongs_to :user
   has_many :order_details, dependent: :destroy
 
+  validates :address, :phone, presence: true
+
   delegate :fullname, :email, to: :user, prefix: true
 
   scope :sort_orders, ->{order(:status, created_at: :desc)}

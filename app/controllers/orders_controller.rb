@@ -1,20 +1,18 @@
 class OrdersController < ApplicationController
   before_action :logged_in_user
-  before_action :build_order, :build_order_detail, only: :create
   before_action :check_invalid_order, only: %i(new create)
+  before_action :build_order, :build_order_detail, only: :create
 
   def new
     if current_cart.empty?
-      flash[:danger] = t".please_buy_item"
+      flash[:danger] = t ".please_buy_item"
       redirect_to root_path
     else
-      @subtotal_in_cart = subtotal @products
       @current_user
     end
   end
 
   def create
-    @subtotal_in_cart = subtotal @products
     ActiveRecord::Base.transaction do
       @order.save!
     end
@@ -41,7 +39,6 @@ class OrdersController < ApplicationController
     current_cart.each do |product_id, quantity|
       product = Product.find_by id: product_id
       next if product.nil?
-      
       @order.order_details.build(
         quantity: quantity,
         price: product.price * quantity.to_i,
@@ -63,11 +60,16 @@ class OrdersController < ApplicationController
         product_name << product_name.to_s
       end  
     end
-    flash[:danger] = t(".product_deleted", count: count) if count > 0
-    unless product_name.empty?
-      flash[:warning] = t(".invalid_quantity", names: product_name.join(","))
-    end
 
+    invalid_message count, product_name
     @products = Product.by_ids load_products_in_cart
+    @subtotal_in_cart = subtotal @products
+  end
+
+  def invalid_message count, product_name
+    flash[:danger] = t(".product_deleted", count: count) if count.positive?
+    return if product_name.empty?
+
+    flash[:warning] = t(".invalid_quantity", names: product_name.join(","))
   end
 end
