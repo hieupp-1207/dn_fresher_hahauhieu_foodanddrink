@@ -1,0 +1,33 @@
+<% provide :title, @product.name %>
+<section class="product-details spad">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-6 col-md-6">
+        <div class="product__details__pic">
+          <div class="product__details__pic__item">
+              <%= image_tag "banner.jpg", alt: "product",
+                class: "product__details__pic__item--large" %>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-6 col-md-6">
+        <div class="product__details__text">
+          <h3><%= @product.name %></h3>
+          <div class="product__details__price"><%= @product.price %> vnđ</div>
+          <p><%= @product.description %></p>
+          <%= form_tag carts_path, remote: true do %>
+          <div class="product__details__quantity">
+            <div class="quantity">
+              <div class="pro-qty">
+                <%= number_field_tag :quantity, 1, min: 1, step: 1 %>
+              </div>
+            </div>
+          </div>
+          <%= hidden_field_tag :product_id, @product.id %>
+            <%= submit_tag t(".add_cart"), class: "primary-btn" %>
+          <% end %>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

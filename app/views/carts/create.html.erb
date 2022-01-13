@@ -1,6 +1,0 @@
-<% if check_quantity? %>
-  $('#cart').html('<%= j render "shared/cart" %>');
-  $('#alert_add_cart').html('<%= j render "shared/alert_add_cart_success" %>');
-<% else %>
-  $('#alert_add_cart').html('<%= j render "shared/alert_add_cart_failed" %>');
-<% end %>
