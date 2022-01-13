@@ -25,7 +25,7 @@
     <div class="col-lg-12">
       <div class="shoping__cart__btns">
         <%= link_to t(".continue_shopping"), root_path, class:"primary-btn cart-btn" %>
-        <%= link_to t(".update_cart"), carts_path, class:"primary-btn cart-btn cart-btn-right" %>
+        <%= link_to t(".reset_cart"), reset_carts_path, data: {confirm: t(".delete_item")}, class:"primary-btn cart-btn cart-btn-right" %>
       </div>
     </div>
       <div class="col-lg-6">

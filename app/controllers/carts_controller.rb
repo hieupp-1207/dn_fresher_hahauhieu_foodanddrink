@@ -13,6 +13,18 @@ class CartsController < ApplicationController
     @subtotal_in_cart = subtotal @products
   end
 
+  def destroy
+    current_cart.delete params[:id].to_s
+    flash[:success] = t ".delete_success"
+    redirect_to carts_path
+  end
+
+  def reset
+    current_cart.clear
+    flash[:success] = t ".reset_success"
+    redirect_to carts_path
+  end
+
   private
 
   def check_quantity
@@ -27,7 +39,7 @@ class CartsController < ApplicationController
     @product = Product.find_by id: params[:product_id]
     return if @product
 
-    flash[:danger] = t "error.not_found_product"
+    flash[:danger] = t "errors.not_found_product"
     redirect_to root_path
   end
 end
