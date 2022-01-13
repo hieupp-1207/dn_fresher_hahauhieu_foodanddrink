@@ -1,5 +1,7 @@
+
 FactoryBot.define do
   factory :category do
-    name { Faker::Food.name }
+    name {"Thit"}
+    parent_id {1}
   end
 end
