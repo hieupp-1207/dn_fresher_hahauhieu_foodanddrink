@@ -2,7 +2,8 @@ class ProductsController < ApplicationController
   before_action :load_product, only: :show
 
   def index
-    @pagy, @products = pagy Product.all.newest, items: Settings.number.digit_12
+    products = Product.search(params[:term]).newest
+    @pagy, @products = pagy products, items: Settings.number.digit_12
   end
 
   def show; end

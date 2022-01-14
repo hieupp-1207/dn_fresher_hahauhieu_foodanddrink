@@ -5,7 +5,7 @@
         <div class="col-lg-6 col-md-6">
           <div class="header__top__left">
             <ul>
-              <li><i class="bi bi-envelope-fill"></i> hahieuhau@gmail.com</li>
+              <li><i class="bi bi-envelope-fill"></i><%= Settings.header.email %></li>
               <li><%= t ".free_ship" %></li>
             </ul>
           </div>
@@ -53,7 +53,7 @@
           <% end %>
         </div>
       </div>
-      <div class="col-lg-6">
+      <div class="col-lg-9">
         <nav class="header__menu">
           <ul>
             <li class="active"><%= link_to t(".home"), root_path %></li>
@@ -77,6 +77,36 @@
               <% end %>
             </li>
           </ul>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-lg-3">
+        <div class="hero__categories">
+          <div class="hero__categories__all">
+            <i class="bi bi-list"></i>
+            <span><%= t ".all_categories" %></span>
+            <i class="bi bi-arrow-down"></i>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-9">
+        <div class="hero__search">
+          <div class="hero__search__form">
+            <%= form_tag(products_path, method: :get) do %>
+              <%= text_field_tag :term,params[:search], placeholder: t(".placeholder") %>
+              <button type="submit" class="site-btn"><%= t ".search" %></button>
+            <% end %>
+          </div>
+          <div class="hero__search__phone">
+            <div class="hero__search__phone__icon">
+              <i class="fa fa-phone"></i>
+            </div>
+            <div class="hero__search__phone__text">
+              <h5><%= Settings.header.phone %></h5>
+              <span><%= t ".support" %></span>
+            </div>
+          </div>
         </div>
       </div>
     </div>

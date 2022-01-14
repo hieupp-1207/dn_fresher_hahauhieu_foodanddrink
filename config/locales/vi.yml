@@ -13,12 +13,9 @@ vi:
       free_ship: "Miễn phí ship cho tất cả đơn hàng trên 250k"
       cart: "Giỏ hàng"
       shop: "Cửa hàng"
-    all_products:
-      add: "Thêm"
-      price: "Giá: %{price} VNĐ"
-      quantity: "Số lượng: %{quantity}"
-      rating: "Đánh giá: %{rating}"
-      all_products: "Tất cả sản phẩm"
+      all_categories: "Tất cả danh mục"
+      search: "TÌM KIẾM"
+      placeholder: "Bạn cần gì?"
     footer:
       address: "Địa chỉ: 16 Lý Thường Kiệt"
       phone: "SĐT: +65 11.188.888"
@@ -31,7 +28,11 @@ vi:
       security_shop: "Mua sắm an toàn"
       delivery_info: "Giao hàng"
       privacy_policy: "Chính sách riêng"
-
+    all_products:
+      add: "Thêm"
+      price: "Giá: %{price} vnđ"
+      quantity: "Số lượng: %{quantity}"
+      rating: "Đánh giá: %{rating}"
   static_pages:
     home:
       home: "Trang chủ"
@@ -74,10 +75,6 @@ vi:
   products:
     index:
       products: "Sản phẩm"
-      add: "Thêm"
-      price: "Giá: %{price} vnđ"
-      quantity: "Số lượng: %{quantity}"
-      rating: "Đánh giá: %{rating}"
       all_products: "Tất cả sản phẩm"
     show:
       add_cart: "Thêm vào giỏ hàng"

@@ -14,12 +14,9 @@ en:
       free_ship: "Free Shipping for all Order of $99"
       cart: "Cart"
       shop: "Shop"
-    all_products:
-      add: "Add"
-      price: "Price: %{price} VNĐ"
-      quantity: "Quantity: %{quantity}"
-      rating: "Rating: %{rating}"
-      all_products: "All products"
+      all_categories: "All categories"
+      search: "SEARCH"
+      placeholder: "What do you need?"
     footer:
       address: "Address: 16 Ly Thuong Kiet"
       phone: "Phone: +65 11.188.888"
@@ -32,11 +29,16 @@ en:
       security_shop: "Secure Shopping"
       delivery_info: "Delivery infomation"
       privacy_policy: "Privacy Policy"
+    all_products:
+      add: "Add"
+      price: "Price: $%{price}"
+      quantity: "Quantity: %{quantity}"
+      rating: "Rating: %{rating}"
   static_pages:
     home:
-      home: "Home"
       all_categories: "All categories"
       search: "SEARCH"
+      home: "Home"
       support: "support 24/7 time"
       fresh_fruit: "FRUIT FRESH"
       vegetable: "Vegetable"
@@ -72,10 +74,6 @@ en:
   products:
     index:
       products: "Products"
-      add: "Add"
-      price: "Price: $%{price}"
-      quantity: "Quantity: %{quantity}"
-      rating: "Rating: %{rating}"
       all_products: "All products"
     show:
       add_cart: "ADD TO CART"
