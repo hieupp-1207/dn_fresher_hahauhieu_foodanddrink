@@ -21,8 +21,8 @@ class SessionsController < ApplicationController
   private
 
   def response_page
-    return redirect_to admin_root_path if is_admin?
-    
+    return redirect_to admin_root_path if current_user.admin?
+
     redirect_to root_path
   end
 end
