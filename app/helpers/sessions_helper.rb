@@ -25,4 +25,8 @@ module SessionsHelper
   def current_cart
     @current_cart ||= session[:cart]
   end
+
+  def is_admin?
+    current_user.role == "admin"
+  end
 end

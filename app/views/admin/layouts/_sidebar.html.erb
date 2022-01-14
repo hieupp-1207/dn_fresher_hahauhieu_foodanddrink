@@ -1,0 +1,36 @@
+<div class="col-md-3 left_col menu_fixed">
+  <div class="left_col scroll-view side_bar_bg">
+    <div class="navbar nav_title img_logo" style="border: 0;">
+        <%= image_tag "logo.png", class: "img_logo" %>
+    </div>
+    <div class="clearfix"></div>
+    <div class="profile clearfix">
+      <div class="profile_pic">
+        <%= image_tag "admin/img.jpg", class:"img-circle profile_img" %>
+      </div>
+      <div class="profile_info">
+        <span><%= t ".welcome" %></span>
+        <h2><%= current_user.fullname %></h2>
+      </div>
+    </div>
+    <br />
+    <div id="sidebar-menu" class="main_menu_side hidden-print main_menu side-bar-font-size">
+      <div class="menu_section font_size_bar">
+        <i class="fa fa-3x fa-pagelines"></i>
+        <%= link_to t(".product"), "#" %>
+      </div>
+      <div class="menu_section">
+        <i class="bi bi-tags"></i>
+        <%= link_to t(".category"), "#" %>
+      </div>
+      <div class="menu_section">
+        <i class="bi bi-cart4"></i>
+        <%= link_to t(".order"), "#" %>
+      </div>
+      <div class="menu_section">
+        <i class="fa fa-3x fa-users"></i>
+        <%= link_to t(".user"), "#" %>
+      </div>
+    </div>
+  </div>
+</div>

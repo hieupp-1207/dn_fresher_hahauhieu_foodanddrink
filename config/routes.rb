@@ -8,6 +8,8 @@ Rails.application.routes.draw do
     resources :users, only: :show
     resources :products, only: %i(index show)
     resources :carts
+    namespace :admin do
+      root "static_pages#home"
+    end
   end
-  
 end

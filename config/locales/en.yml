@@ -14,6 +14,12 @@ en:
       free_ship: "Free Shipping for all Order of $99"
       cart: "Cart"
       shop: "Shop"
+    all_products:
+      add: "Add"
+      price: "Price: %{price} VNĐ"
+      quantity: "Quantity: %{quantity}"
+      rating: "Rating: %{rating}"
+      all_products: "All products"
     footer:
       address: "Address: 16 Ly Thuong Kiet"
       phone: "Phone: +65 11.188.888"
@@ -39,13 +45,10 @@ en:
       shop_now: "SHOP NOW"
       fresh_meat: "Fresh Meat"
       newest_products: "Newest products"
-      add: "Add"
-      price: "Price: %{price} VNĐ"
-      quantity: "Quantity: %{quantity}"
-      rating: "Rating: %{rating}"
-      all_products: "All products"
   hello: "Hello world"
   sign_up: "Sign Up"
+  hello: "Hello world"
+  log_in: "Sign in"
   sessions:
     new:
       email: "Email"
@@ -61,6 +64,7 @@ en:
   errors:
     not_found: "Not Found!!!"
     not_found_product: "Not Found Product!!!"
+    not_enough: "Not Enough product!!"
   pagy:
     nav:
       prev: "Prev"
@@ -78,3 +82,23 @@ en:
   carts:
     create:
       add_success: "Add successful products"
+  admin:
+    layouts:
+      header:
+        english: "English"
+        vietnamese: "Vietnamese"
+        profile: "Profile"
+        log_out: "Log Out"
+      sidebar:
+        welcome: "Welcome, "
+        product: "Product"
+        category: "Category"
+        order: "Order"
+        user: "User"
+      footer:
+        footer_admin: "© 2020 Copyright: OganiFood.com"
+    static_pages:
+      home:
+        admin_page_title: "Admin"
+        hello_admin: "Hello admin!"
+        forbiden: "You need administrator's permission to access this page!"
