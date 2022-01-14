@@ -4,7 +4,7 @@ class Admin::BaseController < ApplicationController
   layout "admin/layouts/application"
 
   def require_admin
-    return if is_admin?
+    return if current_user.admin?
 
     flash[:danger] = t ".forbiden"
     redirect_to root_path
