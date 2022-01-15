@@ -1,10 +1,16 @@
 class CartsController < ApplicationController
   before_action :load_product, :check_quantity, only: :create
-
+  skip_before_action :verify_authenticity_token
+  
   def create
-    add_food_to_cart params[:product_id], params[:quantity]
+    add_product_to_cart params[:product_id], params[:quantity]
     flash[:success] = t ".add_success"
     redirect_to product_path params[:product_id]
+  end
+
+  def index
+    @products = Product.by_ids load_products_in_cart
+    @subtotal_in_cart = subtotal @products
   end
 
   private

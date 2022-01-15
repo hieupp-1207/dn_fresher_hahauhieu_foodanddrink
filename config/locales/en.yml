@@ -47,6 +47,9 @@ en:
       shop_now: "SHOP NOW"
       fresh_meat: "Fresh Meat"
       newest_products: "Newest products"
+      admin_page_title: "Admin"
+      hello_admin: "Hello admin!"
+      forbiden: "You need administrator's permission to access this page!"
   hello: "Hello world"
   sign_up: "Sign Up"
   hello: "Hello world"
@@ -77,9 +80,26 @@ en:
       all_products: "All products"
     show:
       add_cart: "ADD TO CART"
+    product:
+      price_product: "%{price} VNĐ"
   carts:
     create:
       add_success: "Add successful products"
+    index:
+      products: "PRODUCTS"
+      price: "PRICE"
+      quantity: "QUANTITY"
+      total: "TOTAL"
+      continue_shopping: "CONTINUE SHOPPING"
+      update_cart: "UPDATE CART"
+      discount_code: "DISCOUNT CODES"
+      apply_coupon: "APPLY COUPON"
+      cart_total: "CART TOTAL"
+      subtotal: "SUBTOTAL"
+      total: "TOTAL"
+      checkout: "PROCEED TO CHECKOUT"
+      cart: "CART"
+      placeholder_code: "Enter your coupon code"
   admin:
     layouts:
       header:
@@ -95,8 +115,3 @@ en:
         user: "User"
       footer:
         footer_admin: "© 2020 Copyright: OganiFood.com"
-    static_pages:
-      home:
-        admin_page_title: "Admin"
-        hello_admin: "Hello admin!"
-        forbiden: "You need administrator's permission to access this page!"

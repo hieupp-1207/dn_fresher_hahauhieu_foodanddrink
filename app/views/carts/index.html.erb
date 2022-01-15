@@ -1,0 +1,54 @@
+<% provide :title, t(".cart") %>
+<section class="shoping-cart spad">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-12">
+        <div class="shoping__cart__table">
+          <table>
+            <thead>
+              <tr>
+                <th class="shoping__product"><%= t(".products") %></th>
+                <th><%= t(".price") %></th>
+                <th><%= t(".quantity") %></th>
+                <th><%= t(".total") %></th>
+                <th></th>
+              </tr>
+            </thead>
+            <tbody>
+              <%= render @products %>
+            </tbody>
+          </table>
+        </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-lg-12">
+      <div class="shoping__cart__btns">
+        <%= link_to t(".continue_shopping"), root_path, class:"primary-btn cart-btn" %>
+        <%= link_to t(".update_cart"), carts_path, class:"primary-btn cart-btn cart-btn-right" %>
+      </div>
+    </div>
+      <div class="col-lg-6">
+        <div class="shoping__continue">
+          <div class="shoping__discount">
+              <h5><%= t(".discount_code") %></h5>
+              <form action="#">
+                <input type="text" placeholder= <%= t(".placeholder_code")%>>
+                <button type="submit" class="site-btn"><%= t(".apply_coupon") %></button>
+              </form>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-6">
+        <div class="shoping__checkout">
+          <h5><%= t(".cart_total") %></h5>
+          <ul>
+            <li><%= t(".subtotal") %> <span><%= @subtotal_in_cart %></span></li>
+            <li><%= t(".total") %> <span><%= @subtotal_in_cart %></span></li>
+          </ul>
+          <%= link_to t(".checkout"), "#", class:"primary-btn" %>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
