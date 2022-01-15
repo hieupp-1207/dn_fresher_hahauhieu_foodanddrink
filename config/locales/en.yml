@@ -52,7 +52,6 @@ en:
       forbiden: "You need administrator's permission to access this page!"
   hello: "Hello world"
   sign_up: "Sign Up"
-  hello: "Hello world"
   log_in: "Sign in"
   sessions:
     new:
@@ -115,3 +114,21 @@ en:
         user: "User"
       footer:
         footer_admin: "© 2020 Copyright: OganiFood.com"
+    static_pages:
+      home:
+        admin_page_title: "Admin"
+        hello_admin: "Hello admin!"
+        forbiden: "You need administrator's permission to access this page!"
+    products:
+      index:
+        list_products: "List products"
+        products_management: "Products Management"
+        list_products_empty: "List products empty"
+        action: "Action"
+        number: "Number"
+        name: "Name"
+        price: "Price ($)"
+        quantity: "Quantity"
+        rating: "Rating"
+      all_products:
+        price: "$%{price}"
