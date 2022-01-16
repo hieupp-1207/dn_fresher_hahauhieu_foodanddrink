@@ -1,0 +1,19 @@
+<% @products.each_with_index do |product, i| %>
+  <tr>
+    <td scope="row">
+      <%= serial params[:page], i %>
+    </td>
+    <td><%= product.name %></td>
+    <td><%= t(".price", price: product.price) %></td>
+    <td><%= product.quantity %></td>
+    <td><%= product.rating %></td>
+    <td style="width: 2rem" class="d-flex text-center">
+      <%= link_to url_for("#"), role:"button", class:"mr-4" do %>
+        <i class="fa fa-eye text-secondary" style="font-size:20px"></i>
+      <% end %>
+      <%= link_to url_for("#"), role:"button" do %>
+        <i class="fa fa-trash text-danger" style="font-size:20px"></i>
+      <% end %>
+    </td>
+  </tr>
+<% end %>

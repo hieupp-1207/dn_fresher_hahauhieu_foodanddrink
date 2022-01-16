@@ -1,7 +1,7 @@
 class CartsController < ApplicationController
   before_action :load_product, :check_quantity, only: :create
   skip_before_action :verify_authenticity_token
-  
+
   def create
     add_product_to_cart params[:product_id], params[:quantity]
     flash[:success] = t ".add_success"

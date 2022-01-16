@@ -1,0 +1,24 @@
+<% provide :title, t(".list_products") %>
+<h1 class="title"><%= t ".products_management" %></h1>
+<% if @products.any? %>
+  <table class="table table-hover">
+    <thead class="text-white" style="background-color:#7FAD39">
+      <tr>
+        <th><%= t ".number" %></th>
+        <th><%= t ".name" %></th>
+        <th><%= t ".price" %></th>
+        <th><%= t ".quantity" %></th>
+        <th><%= t ".rating" %></th>
+        <th ><%= t ".action" %></th></th>
+      </tr>
+    </thead>
+    <tbody>
+      <%= render "all_products" %>
+    </tbody>
+  </table>
+  <div class="row justify-content-center">
+    <%== pagy_bootstrap_nav @pagy %>
+  </div>
+<% else %>
+  <h4 class="text-danger text center"><%= t ".list_orders_empty" %></h4>
+<% end %>

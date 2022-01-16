@@ -4,8 +4,10 @@ length:
 format:
   VALID_EMAIL_REGEX: !ruby/regexp /\A[\w+\-.]+@[a-z\d\-.]+\.[a-z]+\z/i
 number:
+  digit_1: 1
   digit_12: 12
   digit_8: 8
 header:
   email: "hahieuhau@gmail.com"
   phone: "+65 11.188.888"
+per_page_10: 10
