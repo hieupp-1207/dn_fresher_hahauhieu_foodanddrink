@@ -17,18 +17,23 @@
               <div><%= t ".english" %></div>
               <span class="arrow_carrot-down"></span>
               <ul>
-                <%= link_to t(".english"), locale: :en %>
-                <%= link_to t(".vietnamese"), locale: :vi %>
+                <li><%= link_to t(".english"), locale: :en %></li>
+                <li><%= link_to t(".vietnamese"), locale: :vi %></li>
               </ul>
             </div>
             <% if logged_in? %>
-              <div class="header__top__right__auth">
-                <%= link_to current_user.email, current_user %>
+              <div class="header__top__right__language">
+                <%= link_to current_user.fullname, current_user %>
+                <span class="arrow_carrot-down"></span>
+                <ul>
+                  <li><%= link_to t(".history"), current_user %></li>
+                  <li><%= link_to t(".settings"), "#" %></li>
+                </ul>
               </div>
               <div class="header__top__right__auth">
                 <%= link_to logout_path, method: :delete do %>
                   <i class="bi bi-box-arrow-left text-dark"></i>
-                  <%= t("logout") %>
+                  <%= t(".logout") %>
                 <% end %>
               </div>
             <% else %>

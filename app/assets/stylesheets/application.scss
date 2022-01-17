@@ -5,3 +5,25 @@
 
 @import "bootstrap";
 @import "./sessions.scss";
+
+.page-item.active .page-link {
+  background-color: #7FAD39;
+  border-color: #7FAD39;
+}
+.page-link {
+  color: #7FAD39;
+  font-size: 15px;
+}
+.title {
+  margin-bottom: 0.5rem;
+  font-weight: 700;
+  line-height: 3.2;
+  text-align: center;
+  color: #7FAD39;
+}
+table th {
+  font-size: 100px;
+}
+.table td, .table th {
+  font-size: 15px;
+}

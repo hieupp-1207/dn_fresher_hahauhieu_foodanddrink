@@ -5,7 +5,8 @@ en:
       home: "Home"
       help: "Help"
       contact: "Contact"
-      login: "Sign in"
+      login: "Log in"
+      logout: "Log out"
       english: "English"
       vietnamese: "Vietnamese"
       pages: "Pages"
@@ -17,6 +18,9 @@ en:
       all_categories: "All categories"
       search: "SEARCH"
       placeholder: "What do you need?"
+      history: "History"
+      settings: "Settings"
+      support: "Support"
     footer:
       address: "Address: 16 Ly Thuong Kiet"
       phone: "Phone: +65 11.188.888"
@@ -69,6 +73,7 @@ en:
     not_found: "Not Found!!!"
     not_found_product: "Not Found Product!!!"
     not_enough: "Not Enough product!!"
+    not_login: "Please login!!"
   pagy:
     nav:
       prev: "Prev"
@@ -147,3 +152,23 @@ en:
         admin_page_title: "Admin"
         hello_admin: "Hello admin!"
         forbiden: "You need administrator's permission to access this page!"
+  users:
+    show:
+      history_orders: "History orders"
+      number: "Number"
+      status: "Status"
+      created_at: "Create at"
+      total_price: "Total price ($)"
+      action: "Action"
+    history_order:
+      total_price: "$%{total_price}"
+  time:
+    formats:
+      default: "%Y-%m-%d"
+  enums:
+    order:
+      status:
+        pending: "Pending"
+        accept: "Accept"
+        delivered: "Delivered"
+        cancel: "Cancel"

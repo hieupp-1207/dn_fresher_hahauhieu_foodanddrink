@@ -6,6 +6,7 @@ vi:
       help: "Hỗ trợ"
       contact: "Liên hệ"
       login: "Đăng nhập"
+      logout: "Đăng xuất"
       english: "Tiếng Anh"
       vietnamese: "Tiếng Việt"
       pages: "Tới trang"
@@ -17,6 +18,9 @@ vi:
       all_categories: "Tất cả danh mục"
       search: "TÌM KIẾM"
       placeholder: "Bạn cần gì?"
+      history: "Lịch sử"
+      settings: "Cài đặt"
+      support: "Hỗ trợ"
     footer:
       address: "Địa chỉ: 16 Lý Thường Kiệt"
       phone: "SĐT: +65 11.188.888"
@@ -69,6 +73,7 @@ vi:
     not_found: "Không tìm thấy!!!"
     not_found_product: "Không tìm thấy sản phẩm!!!"
     not_enough: "Không đủ hàng trong kho"
+    not_login: "Làm ơn đăng nhập!!"
   pagy:
     nav:
       prev: "Trước"
@@ -146,3 +151,23 @@ vi:
         admin_page_title: "Quản lý"
         hello_admin: "Chào boss!"
         forbiden: "Bạn cần quyền admin để truy cập trang này!"
+  users:
+    show:
+      history_orders: "Lịch sử đơn hàng"
+      number: "Số thứ tự"
+      status: "Trạng thái"
+      created_at: "Ngày tạo"
+      total_price: "Tổng giá (vnđ)"
+      action: "Chức năng"
+    history_order:
+      total_price: "%{total_price} vnđ"
+  time:
+    formats:
+      default: "%d-%m-%Y"
+  enums:
+    order:
+      status:
+        pending: "Đang chờ"
+        accept: "Chấp nhận"
+        delivered: "Đang chuyển"
+        cancel: "Hủy đơn"
