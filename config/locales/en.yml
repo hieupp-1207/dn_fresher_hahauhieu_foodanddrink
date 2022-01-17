@@ -127,3 +127,23 @@ en:
       rating: "Rating"
     all_products:
       price: "$%{price}"
+    orders:
+      index:
+        list_orders_empty: "List order is empty!"
+        list_orders: "Order list"
+        id: "ID"
+        user_name: "Full name"
+        user_email: "email"
+        address: "Adress"
+        phone: "Phone"
+        status: "Status"
+        created_at: "Create date"
+        total_price: "Total price"
+        action: "Action"
+        order_management: "Order management"
+        number: "Number"
+    static_pages:
+      home:
+        admin_page_title: "Admin"
+        hello_admin: "Hello admin!"
+        forbiden: "You need administrator's permission to access this page!"

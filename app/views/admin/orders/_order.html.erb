@@ -1,0 +1,22 @@
+<% @orders.each_with_index do |order, index| %>
+  <tr>
+    <td scope="row">
+      <%= serial params[:page], index %>
+    </td>
+    <td><%= order.user_fullname %></td>
+    <td><%= order.user_email %></td>
+    <td>
+      <%= order.status %>
+    </td>
+    <td><%= order.created_at.strftime("%m/%d/%Y") %></td>
+    <td><%= number_to_currency(order.total_price) %></td>
+    <td style="width: 2rem" class="d-flex text-center">
+    <%= link_to url_for("#"), role:"button", class:"mr-4" do %>
+      <i class="fa fa-eye text-secondary" style="font-size:20px"></i>
+    <% end %>
+    <%= link_to url_for("#"), role:"button" do %>
+      <i class="fa fa-trash text-danger" style="font-size:20px"></i>
+    <% end %>
+    </td>
+  </tr>
+<% end %>
