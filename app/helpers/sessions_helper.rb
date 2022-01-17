@@ -25,13 +25,14 @@ module SessionsHelper
   def current_cart
     @current_cart ||= session[:cart]
   end
-  
+
   def load_products_in_cart
     current_cart.keys
   end
 
   def subtotal products
-    products.reduce(0) do |sum, item| 
-                          sum + item.price * current_cart[item.id.to_s]; end
+    products.reduce(0) do |sum, item|
+      sum + item.price * current_cart[item.id.to_s]
+    end
   end
 end

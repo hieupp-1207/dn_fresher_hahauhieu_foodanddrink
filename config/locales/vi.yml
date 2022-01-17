@@ -51,8 +51,8 @@ vi:
       hello_admin: "Chào boss!"
       forbiden: "Bạn cần quyền admin để truy cập trang này!"
   hello: "Hello world"
-  sign_up: "Đăng ký"
   log_in: "Đăng nhập"
+  sign_up: "Đăng ký"
   sessions:
     new:
       email_req: "Định dạng email bắt buộc: ex@abc.xyz"
@@ -114,21 +114,16 @@ vi:
         user: "Người dùng"
       footer:
         footer_admin: "© 2020 Copyright: OganiFood.com"
-    static_pages:
-      home:
-        admin_page_title: "Quản lý"
-        hello_admin: "Chào boss!"
-        forbiden: "Bạn cần quyền admin để truy cập trang này!"
-    products:
-      index:
-        list_products: "Danh sách sản phẩm"
-        products_management: "Quản Lý Sản Phẩm"
-        list_products_empty: "Danh sách sản phẩm trống"
-        action: "Chức năng"
-        number: "Số thứ tự"
-        name: "Tên"
-        price: "Giá (vnđ)"
-        quantity: "Số lượng"
-        rating: "Đánh giá"
-      all_products:
-        price: "%{price} vnđ"
+  products:
+    index:
+      list_products: "Danh sách sản phẩm"
+      products_management: "Quản Lý Sản Phẩm"
+      list_products_empty: "Danh sách sản phẩm trống"
+      action: "Chức năng"
+      number: "Số thứ tự"
+      name: "Tên"
+      price: "Giá (vnđ)"
+      quantity: "Số lượng"
+      rating: "Đánh giá"
+    all_products:
+      price: "%{price} vnđ"
