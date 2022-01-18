@@ -39,9 +39,6 @@ vi:
       price: "Giá: %{price} vnđ"
       quantity: "Số lượng: %{quantity}"
       rating: "Đánh giá: %{rating}"
-    show_cart:
-      price_product: "%{price} VNĐ"
-      reset_cart: "Bạn có chắc chắn muốn xóa không?"
   static_pages:
     home:
       home: "Trang chủ"
@@ -95,6 +92,8 @@ vi:
       price: "Giá (vnđ)"
       quantity: "Số lượng"
       rating: "Đánh giá"
+    all_products:
+      price: "%{price} vnđ"
     show:
       add_cart: "Thêm vào giỏ hàng"
     product:
@@ -209,5 +208,19 @@ vi:
         accept: "Chấp nhận"
         delivered: "Đang chuyển"
         cancel: "Hủy đơn"
-    
-
+  orders:
+    product_deleted: "%{count} sản phẩm không tồn tại!"
+    invalid_quantity: "Sản phẩm: %{names} không đủ số lượng trọng hệ thống"
+    new:
+      detail: "Chi tiết đơn hàng"
+      fullname: "Họ và tên"
+      phone: "Số điện thoại"
+      address: "Địa chỉ"
+      order: "ĐƠN HÀNG CỦA BẠN"
+      product: "Sản phẩm"
+      subtotal: "Thành tiền"
+      checkout: "Thanh toán"
+      please_buy_item: "Thêm sản phẩm vào giỏ hàng!!!"
+    create:
+      failed: "Đặt hàng không thành công. Vui lòng kiểm tra và thử lại!"
+      success: "Đơn hàng của bạn đã được đặt thành công!"

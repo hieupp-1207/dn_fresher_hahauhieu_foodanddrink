@@ -25,7 +25,7 @@
     <div class="col-lg-12">
       <div class="shoping__cart__btns">
         <%= link_to t(".continue_shopping"), root_path, class:"primary-btn cart-btn" %>
-        <%= link_to t(".reset_cart"), reset_carts_path, data: {confirm: t(".delete_item")}, class:"primary-btn cart-btn cart-btn-right" %>
+        <%= link_to t(".reset_cart"), reset_carts_path, class:"primary-btn cart-btn cart-btn-right" %>
       </div>
     </div>
       <div class="col-lg-6">
@@ -33,7 +33,7 @@
           <div class="shoping__discount">
               <h5><%= t(".discount_code") %></h5>
               <form action="#">
-                <input type="text" placeholder= <%= t(".placeholder_code")%>>
+                <input type="text" placeholder="<%= t(".placeholder_code") %>">
                 <button type="submit" class="site-btn"><%= t(".apply_coupon") %></button>
               </form>
           </div>
@@ -43,10 +43,10 @@
         <div class="shoping__checkout">
           <h5><%= t(".cart_total") %></h5>
           <ul>
-            <li><%= t(".subtotal") %> <span><%= @subtotal_in_cart %></span></li>
-            <li><%= t(".total") %> <span><%= @subtotal_in_cart %></span></li>
+            <li><%= t(".subtotal") %> <span><%= @subtotal_in_cart.round(2) %></span></li>
+            <li><%= t(".total") %> <span><%= @subtotal_in_cart.round(2) %></span></li>
           </ul>
-          <%= link_to t(".checkout"), "#", class:"primary-btn" %>
+          <%= link_to t(".checkout"), new_order_path, class:"primary-btn" %>
         </div>
       </div>
     </div>

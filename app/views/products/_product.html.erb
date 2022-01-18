@@ -14,10 +14,10 @@
     </div>
   </td>
   <td class="shoping__cart__total">
-    <%= t(".price_product", price: product.price * current_cart[product.id.to_s].to_i) %>
+    <%= t(".price_product", price: total_item(product)) %>
   </td>
   <td class="shoping__cart__item__close">
-    <%= button_to cart_path(:id => product.id), :method => :delete do %>
+    <%= button_to cart_path(id: product.id), method: :delete do %>
       <span class="icon_close"></span>
     <% end %>
   </td>

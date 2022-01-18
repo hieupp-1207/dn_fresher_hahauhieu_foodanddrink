@@ -17,7 +17,7 @@ class UsersController < ApplicationController
     @user = User.find_by id: params[:id]
     return if @user
 
-    flash[:warning] = t "error.not_found"
+    flash[:warning] = t "errors.not_found"
     redirect_to root_path
   end
 end
