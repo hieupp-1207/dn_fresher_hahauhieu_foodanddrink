@@ -21,6 +21,7 @@ vi:
       history: "Lịch sử"
       settings: "Cài đặt"
       support: "Hỗ trợ"
+      language: "Ngôn ngữ"
     footer:
       address: "Địa chỉ: 16 Lý Thường Kiệt"
       phone: "SĐT: +65 11.188.888"
@@ -81,6 +82,23 @@ vi:
     nav:
       prev: "Trước"
       next: "Sau"
+  products:
+    index:
+      products: "Sản phẩm"
+      all_products: "Tất cả sản phẩm"
+      list_products: "Danh sách sản phẩm"
+      products_management: "Quản Lý Sản Phẩm"
+      list_products_empty: "Danh sách sản phẩm trống"
+      action: "Chức năng"
+      number: "Số thứ tự"
+      name: "Tên"
+      price: "Giá (vnđ)"
+      quantity: "Số lượng"
+      rating: "Đánh giá"
+    show:
+      add_cart: "Thêm vào giỏ hàng"
+    product:
+      price_product: "%{price} VNĐ"
   carts:
     create:
       add_success: "Thêm sản phẩm thành công"
@@ -110,6 +128,7 @@ vi:
         vietnamese: "Tiếng Việt"
         profile: "Hồ sơ"
         log_out: "Đăng xuất"
+        language: "Ngôn ngữ"
       sidebar:
         welcome: "Xin chào, "
         product: "Sản phẩm"
@@ -118,10 +137,13 @@ vi:
         user: "Người dùng"
       footer:
         footer_admin: "© 2020 Copyright: OganiFood.com"
+    all_products:
+      price: "%{price} vnđ"
     orders:
       index:
         list_orders_empty: "List order is empty!"
         list_orders: "Order list"
+        id: "ID"
         user_name: "Họ tên"
         user_email: "Email"
         address: "Địa chỉ"
@@ -152,6 +174,23 @@ vi:
     product:
       price_product: "%{price} VNĐ"
       delete_item: "Xác nhận xóa?"
+    order_details:
+      index:
+        not_found_order: "Không tìm thấy đơn hàng này"
+        update: "Cập nhật"
+        status: "Trạng thái:     "
+        order_details: "Chi tiết đơn hàng"
+        user_name: "Họ tên:  "
+        phone: "SĐT:  "
+        adress: "Địa chỉ:  "
+        email: "Email:  "
+        created_at: "Ngày tạo:  "
+        close: "Đóng"
+    static_pages:
+      home:
+        admin_page_title: "Quản lý"
+        hello_admin: "Chào boss!"
+        forbiden: "Bạn cần quyền admin để truy cập trang này!"
   users:
     show:
       history_orders: "Lịch sử đơn hàng"
@@ -160,8 +199,6 @@ vi:
       created_at: "Ngày tạo"
       total_price: "Tổng giá (vnđ)"
       action: "Chức năng"
-    history_order:
-      total_price: "%{total_price} vnđ"
   time:
     formats:
       default: "%d-%m-%Y"

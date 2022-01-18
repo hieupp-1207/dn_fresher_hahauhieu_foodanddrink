@@ -1,0 +1,12 @@
+<% @order_details.each do |item| %>
+  <tr style="line-height: 2">
+    <td class="text-lg-left" style="font-size: 20px"><%= item.product_name %></td>
+    <td class="text-center " style="font-size: 20px"><%= item.quantity %></td>
+    <td style="font-size: 20px">
+      <%= number_to_currency(item.price) %>
+    </td>
+    <td style="font-size: 20px">
+      <%= number_to_currency(item.price*item.quantity) %>
+    </td>
+  </tr>
+<% end %>

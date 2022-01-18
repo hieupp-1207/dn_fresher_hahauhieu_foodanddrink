@@ -1,7 +1,7 @@
 Category.create!(name: "Thit",
                  parent_id: 1)
 30.times do |n|
-  name = Faker::Name.name
+  name = Faker::Food.fruits
   description = "example-#{n+1}@railstutorial.org"
   image = "banner.jpg"
   price = Faker::Number.decimal(l_digits: 5, r_digits: 2)
@@ -58,17 +58,4 @@ end
     order.total_price += price
   end
   order.save!
-end
-
-25.times do |n|
-  user_id = 2
-  address = Faker::Address.full_address
-  phone = Faker::PhoneNumber.phone_number
-  total_price = n + 1
-  Order.create!(
-      user_id: user_id,
-      address: address,
-      phone: phone,
-      total_price: total_price
-  )
 end

@@ -6,12 +6,12 @@
     <td><%= order.user_fullname %></td>
     <td><%= order.user_email %></td>
     <td>
-      <%= order.status %>
+      <%= order.status_i18n %>
     </td>
-    <td><%= order.created_at.strftime("%m/%d/%Y") %></td>
+    <td><%= l(order.created_at, format: :default) %></td>
     <td><%= number_to_currency(order.total_price) %></td>
-    <td style="width: 2rem" class="d-flex text-center">
-    <%= link_to url_for("#"), role:"button", class:"mr-4" do %>
+  <td style="width: 2rem" class="d-flex text-center">
+    <%= link_to admin_order_order_details_path(order), class:"mr-2" do %>
       <i class="fa fa-eye text-secondary" style="font-size:20px"></i>
     <% end %>
     <%= link_to url_for("#"), role:"button" do %>

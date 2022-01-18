@@ -2,7 +2,7 @@
 @import "./admin/css/bootstrap.min.css";
 @import "./admin/css/custom.min.css";
 @import "./admin/css/custom.css";
-@import "./admin/css/order_custom.css";
+@import "./admin/css/orders.scss";
 
 .page-item.active .page-link {
   background-color: #7FAD39;
@@ -20,7 +20,7 @@
   color: #7FAD39;
 }
 table th {
-  font-size: 100px;
+  font-size: 22px;
 }
 .table td, .table th {
   font-size: 15px;
