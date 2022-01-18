@@ -38,6 +38,9 @@ en:
       price: "Price: $%{price}"
       quantity: "Quantity: %{quantity}"
       rating: "Rating: %{rating}"
+    show_cart:
+      price_product: "%{price} VNĐ"
+      reset_cart: "Are you sure?"
   static_pages:
     home:
       all_categories: "All categories"
@@ -78,14 +81,6 @@ en:
     nav:
       prev: "Prev"
       next: "Next"
-  products:
-    index:
-      products: "Products"
-      all_products: "All products"
-    show:
-      add_cart: "ADD TO CART"
-    product:
-      price_product: "%{price} VNĐ"
   carts:
     create:
       add_success: "Add successful products"
@@ -95,7 +90,7 @@ en:
       quantity: "QUANTITY"
       total: "TOTAL"
       continue_shopping: "CONTINUE SHOPPING"
-      update_cart: "UPDATE CART"
+      reset_cart: "RESET CART"
       discount_code: "DISCOUNT CODES"
       apply_coupon: "APPLY COUPON"
       cart_total: "CART TOTAL"
@@ -104,6 +99,10 @@ en:
       checkout: "PROCEED TO CHECKOUT"
       cart: "CART"
       placeholder_code: "Enter your coupon code"
+    destroy:
+      delete_success: "Deleted product"
+    reset:
+      reset_success: "Reset cart success"
   admin:
     layouts:
       header:
@@ -119,19 +118,6 @@ en:
         user: "User"
       footer:
         footer_admin: "© 2020 Copyright: OganiFood.com"
-  products:
-    index:
-      list_products: "List products"
-      products_management: "Products Management"
-      list_products_empty: "List products empty"
-      action: "Action"
-      number: "Number"
-      name: "Name"
-      price: "Price ($)"
-      quantity: "Quantity"
-      rating: "Rating"
-    all_products:
-      price: "$%{price}"
     orders:
       index:
         list_orders_empty: "List order is empty!"
@@ -147,11 +133,26 @@ en:
         action: "Action"
         order_management: "Order management"
         number: "Number"
-    static_pages:
-      home:
-        admin_page_title: "Admin"
-        hello_admin: "Hello admin!"
-        forbiden: "You need administrator's permission to access this page!"
+  products:
+    index:
+      list_products: "List products"
+      products_management: "Products Management"
+      list_products_empty: "List products empty"
+      action: "Action"
+      number: "Number"
+      name: "Name"
+      price: "Price ($)"
+      quantity: "Quantity"
+      rating: "Rating"
+      products: "Products"
+      all_products: "All products"
+    all_products:
+      price: "$%{price}"
+    show:
+      add_cart: "ADD TO CART"
+    product:
+      price_product: "%{price} VNĐ"
+      delete_item: "Are you sure?"
   users:
     show:
       history_orders: "History orders"

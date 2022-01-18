@@ -8,7 +8,11 @@ Rails.application.routes.draw do
     get "/logout", to: "sessions#destroy"
     resources :users, only: :show
     resources :products, only: %i(index show)
-    resources :carts
+    resources :carts, only: %i(create index destroy) do
+      collection do
+        get "reset"
+      end
+    end
     namespace :admin do
       root "static_pages#home"
       resources :products, only: :index

@@ -38,6 +38,9 @@ vi:
       price: "Giá: %{price} vnđ"
       quantity: "Số lượng: %{quantity}"
       rating: "Đánh giá: %{rating}"
+    show_cart:
+      price_product: "%{price} VNĐ"
+      reset_cart: "Bạn có chắc chắn muốn xóa không?"
   static_pages:
     home:
       home: "Trang chủ"
@@ -78,14 +81,6 @@ vi:
     nav:
       prev: "Trước"
       next: "Sau"
-  products:
-    index:
-      products: "Sản phẩm"
-      all_products: "Tất cả sản phẩm"
-    show:
-      add_cart: "Thêm vào giỏ hàng"
-    product:
-      price_product: "%{price} VNĐ"
   carts:
     create:
       add_success: "Thêm sản phẩm thành công"
@@ -95,7 +90,7 @@ vi:
       quantity: "SỐ LƯỢNG"
       total: "THÀNH TIỀN"
       continue_shopping: "TIẾP TỤC MUA HÀNG"
-      update_cart: "CÂP NHẬT"
+      reset_cart: "LÀM MỚI"
       discount_code: "MÃ KHUYẾN MÃI"
       apply_coupon: "ÁP DỤNG"
       cart_total: "TỔNG TIỀN"
@@ -104,6 +99,10 @@ vi:
       checkout: "THANH TOÁN"
       cart: "GIỎ HÀNG"
       placeholder_code: "Nhập mã giảm giá"
+    destroy:
+      delete_success: "Đã xóa sản phẩm"
+    reset:
+      reset_success: "Đã làm mới giỏ hàng"
   admin:
     layouts:
       header:
@@ -119,19 +118,6 @@ vi:
         user: "Người dùng"
       footer:
         footer_admin: "© 2020 Copyright: OganiFood.com"
-  products:
-    index:
-      list_products: "Danh sách sản phẩm"
-      products_management: "Quản Lý Sản Phẩm"
-      list_products_empty: "Danh sách sản phẩm trống"
-      action: "Chức năng"
-      number: "Số thứ tự"
-      name: "Tên"
-      price: "Giá (vnđ)"
-      quantity: "Số lượng"
-      rating: "Đánh giá"
-    all_products:
-      price: "%{price} vnđ"
     orders:
       index:
         list_orders_empty: "List order is empty!"
@@ -146,11 +132,26 @@ vi:
         action: "Chức năng"
         order_management: "Quản lý đơn hàng"
         number: "STT"
-    static_pages:
-      home:
-        admin_page_title: "Quản lý"
-        hello_admin: "Chào boss!"
-        forbiden: "Bạn cần quyền admin để truy cập trang này!"
+  products:
+    index:
+      list_products: "Danh sách sản phẩm"
+      products_management: "Quản Lý Sản Phẩm"
+      list_products_empty: "Danh sách sản phẩm trống"
+      action: "Chức năng"
+      number: "Số thứ tự"
+      name: "Tên"
+      price: "Giá (vnđ)"
+      quantity: "Số lượng"
+      rating: "Đánh giá"
+      products: "Sản phẩm"
+      all_products: "Tất cả sản phẩm"
+    all_products:
+      price: "%{price} vnđ"
+    show:
+      add_cart: "Thêm vào giỏ hàng"
+    product:
+      price_product: "%{price} VNĐ"
+      delete_item: "Xác nhận xóa?"
   users:
     show:
       history_orders: "Lịch sử đơn hàng"
@@ -171,3 +172,5 @@ vi:
         accept: "Chấp nhận"
         delivered: "Đang chuyển"
         cancel: "Hủy đơn"
+    
+
