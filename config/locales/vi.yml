@@ -75,6 +75,7 @@ vi:
     not_found_product: "Không tìm thấy sản phẩm!!!"
     not_enough: "Không đủ hàng trong kho"
     not_login: "Làm ơn đăng nhập!!"
+    not_found_order: "Không tìm thấy đơn hàng!!!"
   pagy:
     nav:
       prev: "Trước"
@@ -224,3 +225,17 @@ vi:
     create:
       failed: "Đặt hàng không thành công. Vui lòng kiểm tra và thử lại!"
       success: "Đơn hàng của bạn đã được đặt thành công!"
+    show:
+      order_details: "Chi tiết đơn hàng"
+      list_order_details_empty: "Danh sách chi tiết đơn hàng trống!"
+      update: "Cập nhật"
+      user_name: "Tên người dùng: "
+      phone: "Số điện thoại: "
+      adress: "Địa chỉ: "
+      email: "Email: "
+      food_name: "Tên sản phẩm"
+      order_quantity: "Số lượng đặt hàng"
+      product_price: "Giá sản phẩm"
+      total_price_item: "Tổng giá sản phẩm"
+      close: "Đóng"
+      total_price: "Tổng giá thanh toán"

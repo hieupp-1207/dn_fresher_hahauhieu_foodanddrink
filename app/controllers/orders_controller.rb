@@ -2,6 +2,7 @@ class OrdersController < ApplicationController
   before_action :logged_in_user
   before_action :check_invalid_order, only: %i(new create)
   before_action :build_order, :build_order_detail, only: :create
+  before_action :find_order, only: :show
 
   def new
     if current_cart.empty?
@@ -23,6 +24,8 @@ class OrdersController < ApplicationController
     current_cart.clear
     flash[:success] = t ".success"
     redirect_to root_path
+  def show
+    @order_details = @order.order_details.sort_by_created_at
   end
 
   private
@@ -71,5 +74,12 @@ class OrdersController < ApplicationController
     return if product_name.empty?
 
     flash[:warning] = t(".invalid_quantity", names: product_name.join(","))
+
+  def find_order
+    @order = Order.includes(:order_details).find_by id: params[:id]
+    return if @order
+
+    flash[:warning] = t "error.not_found_order"
+    redirect_to root_path
   end
 end
