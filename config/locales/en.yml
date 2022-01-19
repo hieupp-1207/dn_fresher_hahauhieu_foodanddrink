@@ -75,6 +75,7 @@ en:
     not_found_product: "Not Found Product!!!"
     not_enough: "Not Enough product!!"
     not_login: "Please login!!"
+    not_found_order: "Not Found Order!!!"
   pagy:
     nav:
       prev: "Prev"
@@ -227,3 +228,17 @@ en:
     create:
       failed: "Order failed. Please check and try again!"
       success: "Your order has been successfully placed!"
+    show:
+      order_details: "Orders details"
+      list_order_details_empty: "List order details empty!"
+      update: "Update"
+      user_name: "User name: "
+      phone: "Phone: "
+      adress: "Adress: "
+      email: "Email: "
+      food_name: "Food name"
+      order_quantity: "Order quantity"
+      product_price: "Product price"
+      total_price_item: "Total pricee item"
+      close: "Close"
+      total_price: "Total price"

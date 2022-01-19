@@ -97,7 +97,7 @@
         <div class="hero__search">
           <div class="hero__search__form">
             <%= form_tag(products_path, method: :get) do %>
-              <%= text_field_tag :term,params[:search], placeholder: t(".placeholder") %>
+              <%= text_field_tag :term, params[:term], placeholder: t(".placeholder") %>
               <button type="submit" class="site-btn"><%= t ".search" %></button>
             <% end %>
           </div>

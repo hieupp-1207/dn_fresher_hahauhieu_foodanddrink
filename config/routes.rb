@@ -13,6 +13,7 @@ Rails.application.routes.draw do
         get "reset"
       end
     end
+    resources :orders
     namespace :admin do
       root "static_pages#home"
       resources :products, only: :index

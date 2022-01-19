@@ -49,7 +49,6 @@ end
   address = Faker::Address.full_address
   phone = Faker::PhoneNumber.phone_number
   order = Order.new user_id: user_id, address: address, phone: phone
-
   4.times do |m|
     product_id = 1 + m
     product_id = n + m if n > 0
@@ -58,4 +57,30 @@ end
     order.total_price += price
   end
   order.save!
+end
+
+25.times do |n|
+  user_id = 2
+  address = Faker::Address.full_address
+  phone = Faker::PhoneNumber.phone_number
+  total_price = n + 1
+  Order.create!(
+      user_id: user_id,
+      address: address,
+      phone: phone,
+      total_price: total_price
+  )
+end
+
+25.times do |n|
+  order_id = 24
+  quantity = n + 1
+  price = n + 2
+  product_id = 1
+  OrderDetail.create!(
+      order_id: order_id,
+      quantity: quantity,
+      price: price,
+      product_id: product_id
+  )
 end

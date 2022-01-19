@@ -1,5 +1,6 @@
 <% provide :title, t(".products") %>
 <% provide :product_title, t(".all_products") %>
+<% if @products.any? %>
 <section class="hero">
   <div class="container">
     <% if @products != nil && @products.any? %> 
@@ -11,3 +12,6 @@
     
   </div>
 </section>
+<% else %>
+  <h4 class="text-danger text-center"><%= t "error.not_found_product" %></h4>
+<% end %>
