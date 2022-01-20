@@ -60,8 +60,6 @@ config/credentials.yml.enc
 
 .gitattributes
 
-spec/
-
 test/
 
 db/schema.rb

@@ -24,6 +24,8 @@ class OrdersController < ApplicationController
     current_cart.clear
     flash[:success] = t ".success"
     redirect_to root_path
+  end
+
   def show
     @order_details = @order.order_details.sort_by_created_at
   end
@@ -42,6 +44,7 @@ class OrdersController < ApplicationController
     current_cart.each do |product_id, quantity|
       product = Product.find_by id: product_id
       next if product.nil?
+
       @order.order_details.build(
         quantity: quantity,
         price: product.price * quantity.to_i,
@@ -53,15 +56,15 @@ class OrdersController < ApplicationController
   def check_invalid_order
     count = 0
     product_name = []
-    session[:cart].each do |product_id, quantity|
+    session[:cart].each do |product_id, _quantity|
       product = Product.find_by id: product_id
-      
+
       if product.nil?
         current_cart.delete product_id.to_s
         count += 1
       elsif current_cart[product_id] > product.quantity
         product_name << product_name.to_s
-      end  
+      end
     end
 
     invalid_message count, product_name
@@ -74,6 +77,7 @@ class OrdersController < ApplicationController
     return if product_name.empty?
 
     flash[:warning] = t(".invalid_quantity", names: product_name.join(","))
+  end
 
   def find_order
     @order = Order.includes(:order_details).find_by id: params[:id]
