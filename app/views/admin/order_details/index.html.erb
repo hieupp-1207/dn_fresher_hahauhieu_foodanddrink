@@ -26,10 +26,11 @@
         </tr>
         <tr>
           <td class="text-start">
-            <%= form_tag class:"form-inline d-flex" do %>
+            <%= form_tag admin_order_path(@order), method: :patch, class:"form-inline d-flex" do %>
               <div class="form-group mb-2">
                 <%= t ".status", class:"sr-only" %>
-                <%= select_tag :status, options_for_select(Order.statuses,
+                <%= select_tag :status,
+                  options_for_select(Order.statuses.excluding(:canceled),
                   selected: Order.statuses[@order.status]), style:"width: 100px",
                   class:"form-control-plaintext d-inline btn-outline-info" %>
                 <%= submit_tag t(".update"), class: "btn btn-warning mb-2" %>

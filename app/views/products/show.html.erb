@@ -5,7 +5,7 @@
       <div class="col-lg-6 col-md-6">
         <div class="product__details__pic">
           <div class="product__details__pic__item">
-              <%= image_tag "banner.jpg", alt: "product",
+              <%= image_tag @product.image, alt: "product",
                 class: "product__details__pic__item--large" %>
           </div>
         </div>
@@ -13,7 +13,7 @@
       <div class="col-lg-6 col-md-6">
         <div class="product__details__text">
           <h3><%= @product.name %></h3>
-          <div class="product__details__price"><%= @product.price %> vnđ</div>
+          <div class="product__details__price"><%= number_to_currency(@product.price) %></div>
           <p><%= @product.description %></p>
           <%= form_tag carts_path, remote: true do %>
           <div class="product__details__quantity">

@@ -1,10 +1,10 @@
 <tr>
   <td class="shoping__cart__item">
-    <%= image_tag "cart-1.jpg" %>
+    <%= image_tag product.image %>
     <h5><%= product.name %></h5>
   </td>
   <td class="shoping__cart__price">
-    <%= t(".price_product", price: product.price) %>
+    <%= t(".price_product", price: handle_price(product)) %>
   </td>
   <td class="shoping__cart__quantity">
     <div class="quantity">

@@ -101,6 +101,7 @@ en:
       add_cart: "ADD TO CART"
     product:
       price_product: "%{price} VNĐ"
+      delete_item: "Are you sure?"
   carts:
     create:
       add_success: "Add successful products"
@@ -156,26 +157,13 @@ en:
         action: "Action"
         order_management: "Order management"
         number: "Number"
-  products:
-    index:
-      list_products: "List products"
-      products_management: "Products Management"
-      list_products_empty: "List products empty"
-      action: "Action"
-      number: "Number"
-      name: "Name"
-      price: "Price ($)"
-      quantity: "Quantity"
-      rating: "Rating"
-      products: "Products"
-      all_products: "All products"
-    all_products:
-      price: "$%{price}"
-    show:
-      add_cart: "ADD TO CART"
-    product:
-      price_product: "%{price} VNĐ"
-      delete_item: "Are you sure?"
+      order:
+        update: "Update"
+        confirm_change: "This action can NOT be undone. Do you want to update status?"
+      update:
+        update_status_success: "Update status successfully!"
+        update_status_fail: "Update status fail!"
+        update_status_invalid: "Please select the status behind the original status"
     order_details:
       index:
         not_found_order: "Not Found This Order!"

@@ -6,15 +6,22 @@
     <td><%= order.user_fullname %></td>
     <td><%= order.user_email %></td>
     <td>
-      <%= order.status_i18n %>
+    <%= form_tag admin_order_path(order), method: :patch,
+          data: {confirm: t(".confirm_change")} do %>
+      <%= select_tag :status,
+       options_for_select(Order.statuses.without(:canceled),
+       selected: Order.statuses[order.status]), 
+       class: "form-control-plaintext d-inline btn-outline-info select-size" %>
+      <%= submit_tag t(".update"), class: "btn btn-warning mb-2" %>
+    <% end %>
     </td>
     <td><%= l(order.created_at, format: :default) %></td>
     <td><%= number_to_currency(order.total_price) %></td>
   <td style="width: 2rem" class="d-flex text-center">
-    <%= link_to admin_order_order_details_path(order), class:"mr-2" do %>
+    <%= link_to admin_order_order_details_path(order), class: "mr-2" do %>
       <i class="fa fa-eye text-secondary" style="font-size:20px"></i>
     <% end %>
-    <%= link_to url_for("#"), role:"button" do %>
+    <%= link_to url_for("#"), role: "button" do %>
       <i class="fa fa-trash text-danger" style="font-size:20px"></i>
     <% end %>
     </td>
