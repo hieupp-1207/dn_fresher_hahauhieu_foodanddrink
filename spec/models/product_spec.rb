@@ -17,6 +17,25 @@ RSpec.describe Product, type: :model do
         create(:product ,category_id: category.id)
       end
       expect(Product.limit_8.count).to eq(8)
+  describe "#by_ids" do
+    it "search product by id exist" do
+      category = Category.create! name: "thit"
+      product = category.products.create(name: "name product")
+
+      expect(Product.by_ids(product.id)).to include product
+    end
+    it "search product by id not exist" do
+      expect(Product.by_ids("")).to eq []
+    end
+  end
+
+  describe "#search" do
+    it "search product by name exist" do
+      category = Category.create! name: "thit"
+      product_1 = category.products.create(name: "name product 1")
+      product_2 = category.products.create(name: "name product 2")
+
+      expect(Product.search("name")).to include [product_1, product_2]
     end
   end
 end
