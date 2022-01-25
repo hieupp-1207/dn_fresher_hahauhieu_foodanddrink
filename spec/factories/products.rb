@@ -6,5 +6,6 @@ FactoryBot.define do
     price { Faker::Number.decimal }
     quantity { Faker::Number.digit }
     rating { Faker::Number.digit }
+    category_id {create(:category).id}
   end
 end

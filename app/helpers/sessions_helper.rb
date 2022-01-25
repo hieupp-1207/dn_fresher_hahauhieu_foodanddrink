@@ -54,6 +54,6 @@ module SessionsHelper
   end
 
   def handle_price product
-    (product.price).round(2)
+    product.price.round(2)
   end
 end
