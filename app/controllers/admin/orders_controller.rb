@@ -10,7 +10,7 @@ class Admin::OrdersController < Admin::BaseController
   def update
     ActiveRecord::Base.transaction do
       @order.update! status: status_params.to_i
-      @order.update_quantity_product
+      @order.update_quantity_product if @order.rejected?
     end
     flash[:success] = t ".update_status_success"
   rescue ActiveRecord::RecordInvalid
@@ -26,7 +26,7 @@ class Admin::OrdersController < Admin::BaseController
     return if @order
 
     flash[:danger] = t ".not_found_order"
-    redirect_to :index
+    redirect_to admin_orders_path
   end
 
   def valid_status?

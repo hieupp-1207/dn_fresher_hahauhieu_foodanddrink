@@ -14,7 +14,7 @@ class Order < ApplicationRecord
     order_details.each do |order_detail|
       product = order_detail.product
       quantity = product.quantity + order_detail.quantity
-      product.update! quantity: quantity if rejected?
+      product.update! quantity: quantity
     end
   end
 end
