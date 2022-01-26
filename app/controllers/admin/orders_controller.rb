@@ -9,7 +9,7 @@ class Admin::OrdersController < Admin::BaseController
 
   def update
     ActiveRecord::Base.transaction do
-      @order.update! status: status_params.to_i
+      @order.send "#{Order.statuses.keys[status_params.to_i]}!"
       @order.update_quantity_product if @order.rejected?
     end
     flash[:success] = t ".update_status_success"

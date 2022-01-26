@@ -1,5 +1,4 @@
 require "rails_helper"
-require "support/factory_bot"
 include SessionsHelper
 
 RSpec.describe Admin::OrdersController, type: :controller do
