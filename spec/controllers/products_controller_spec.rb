@@ -2,7 +2,7 @@ require "rails_helper"
 
 RSpec.describe ProductsController, type: :controller do
   describe "GET #index" do
-    let!(:products) {FactoryBot.create_list(:product, 10)}
+    let!(:product_1) {FactoryBot.create :product, name: "banana"}
 
     context "when product empty" do
       before{get :index, params: {term: "11111111111"}}
@@ -18,14 +18,14 @@ RSpec.describe ProductsController, type: :controller do
     end
 
     context "when product exist" do
-      before{get :index, params: {term: "a"}}
+      before{get :index, params: {term: "banana"}}
 
       it "returns a success response" do
         expect(response).to be_successful
       end
 
       it "assigns products" do
-        expect((assigns :products).count).to eq products.count
+        expect(assigns :products).to eq [product_1]
       end
     end
   end

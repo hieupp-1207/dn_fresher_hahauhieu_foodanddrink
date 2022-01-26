@@ -1,9 +1,8 @@
 require 'rails_helper'
 
 RSpec.describe Product, type: :model do
-  let!(:category) {FactoryBot.create :category}
-  let!(:product_1) {FactoryBot.create :product, category_id: category.id}
-  let!(:product_2) {FactoryBot.create :product, category_id: category.id}
+  let!(:product_1) {FactoryBot.create :product, name: "banana"}
+  let!(:product_2) {FactoryBot.create :product, name: "apple"}
 
   describe ".newest" do
     it "orders by created_at desc" do
@@ -14,7 +13,7 @@ RSpec.describe Product, type: :model do
   describe ".limit_8" do
     it "select only 8 products" do
       30.times do |n|
-        create(:product ,category_id: category.id)
+        create(:product)
       end
       expect(Product.limit_8.count).to eq(8)
     end
@@ -31,7 +30,7 @@ RSpec.describe Product, type: :model do
 
   describe "#search" do
     it "search product by name exist" do
-      expect(Product.search("Faker::Food")).to eq [product_1, product_2]
+      expect(Product.search("banana")).to eq [product_1]
     end
     it "search product by name not exist" do
       expect(Product.search("abcxyz")).to eq []
