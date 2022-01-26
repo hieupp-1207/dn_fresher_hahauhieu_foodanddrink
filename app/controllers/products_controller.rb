@@ -4,7 +4,8 @@ class ProductsController < ApplicationController
   def index
     products = Product.search(params[:term]).newest
     if products.empty?
-      flash[:danger] = t ".errors.not_found_product"
+      flash[:danger] = t "errors.not_found_product"
+      redirect_to products_path
     else
       @pagy, @products = pagy products, items: Settings.number.digit_12
     end
