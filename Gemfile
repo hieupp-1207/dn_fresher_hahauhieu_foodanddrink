@@ -44,10 +44,11 @@ end
 
 group :test do
   gem "capybara", ">= 3.26"
-  gem "database_cleaner"
+  gem "database_cleaner", "~> 1.5"
   gem "factory_bot_rails"
+  gem "rails-controller-testing"
   gem "selenium-webdriver"
-  gem "shoulda-matchers", "~> 3.0"
+  gem "shoulda-matchers", "~> 5.0"
   gem "webdrivers"
 end
 
