@@ -7,7 +7,7 @@ RSpec.describe Admin::OrdersController, type: :controller do
       let!(:orders) {create_list(:order,3)}
       before do
         user = FactoryBot.create(:user, role: 1)
-        log_in user
+        sign_in user
         get :index
       end
       
@@ -23,7 +23,7 @@ RSpec.describe Admin::OrdersController, type: :controller do
     context "when not login as admin" do
       before do
         user = FactoryBot.create(:user)
-        log_in user
+        sign_in user
         get :index
       end
 
@@ -44,7 +44,7 @@ RSpec.describe Admin::OrdersController, type: :controller do
       let(:stub_referer) {admin_orders_path}
 
       before do
-        log_in user
+        sign_in user
         request.headers.merge! referer: stub_referer    
         patch :update, params: {
           id: order.id,
@@ -67,7 +67,7 @@ RSpec.describe Admin::OrdersController, type: :controller do
       let!(:order) {create(:order, user_id: user.id, status: 2)}
       let(:stub_referer) {admin_orders_path}
       before do
-        log_in user
+        sign_in user
         patch :update, params: {
           id: order.id,
           status: "0"
@@ -87,7 +87,7 @@ RSpec.describe Admin::OrdersController, type: :controller do
       let!(:user) {create(:user, role: 1)}
       let!(:order) {create(:order, user_id: user.id, status: 2)}
       before do
-        log_in user
+        sign_in user
         patch :update, params: {
           id: -1,
           status: "0"

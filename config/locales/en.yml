@@ -1,5 +1,8 @@
 en:
   title: "OGANI"
+  hello: "Hello world"
+  sign_up: "Sign Up"
+  log_in: "Sign in"
   layouts:
     header:
       home: "Home"
@@ -55,18 +58,39 @@ en:
       admin_page_title: "Admin"
       hello_admin: "Hello admin!"
       forbiden: "You need administrator's permission to access this page!"
-  hello: "Hello world"
-  sign_up: "Sign Up"
-  log_in: "Sign in"
+  devise:
+    sessions:
+      new:
+        email: "Email"
+        email_req: "Valid email is required: ex@abc.xyz"
+        password: "Password"
+        password_req: "Password is required"
+        remember_me: "Remember Me"
+        forgot_password: "Forgot Password?"
+        logout: "Logout"
+    registrations:
+      new:
+        email: "Email"
+        email_req: "Valid email is required: ex@abc.xyz"
+        password: "Password"
+        password_confirmation: "Password Confirmation"
+        email: "Email"
+        name: "Fullname"
+        name_req: "Fullname is required"
+        already_account: "Already account"
+      edit:
+        unhappy: "Unhappy"
+        cancel_account: "Cancel my account"
+        back: "Back"
+        update: "Update"
+        edit: "Edit"
+    shared:
+      links:
+        forgot_pass: "Forgot your password?"
+        not_receive_confirmation_instructions: "Didn't receive confirmation instructions?"
+        not_receive_unlock_instructions: "Didn't receive unlock instructions?"
+        sign_in_with: "Sign in with"
   sessions:
-    new:
-      email: "Email"
-      email_req: "Valid email is required: ex@abc.xyz"
-      password: "Password"
-      password_req: "Password is required"
-      remember_me: "Remember Me"
-      forgot_password: "Forgot Password?"
-      logout: "Logout"
     create:
       login_success: "Login success!!!"
       login_fail: "Login fail!!!"
