@@ -1,11 +1,15 @@
 vi:
   title: "OGANI"
+  hello: "Hello world"
+  log_in: "Đăng nhập"
+  sign_up: "Đăng ký"
   layouts:
     header:
       home: "Trang chủ"
       help: "Hỗ trợ"
       contact: "Liên hệ"
       login: "Đăng nhập"
+      sign_up: "Đăng ký"
       logout: "Đăng xuất"
       english: "Tiếng Anh"
       vietnamese: "Tiếng Việt"
@@ -55,18 +59,40 @@ vi:
       admin_page_title: "Quản lý"
       hello_admin: "Chào boss!"
       forbiden: "Bạn cần quyền admin để truy cập trang này!"
-  hello: "Hello world"
-  log_in: "Đăng nhập"
-  sign_up: "Đăng ký"
+  devise:
+    sessions:
+      new:
+        email_req: "Định dạng email bắt buộc: ex@abc.xyz"
+        password_req: "Mật khẩu không được để trống"
+        password: "Mật khẩu"
+        email: "Email"
+        remember_me: "Lưu thông tin"
+        forgot_password: "Quên mật khẩu?"
+        logout: "Đăng xuất"
+    registrations:
+      new:
+        email_req: "Định dạng email bắt buộc: ex@abc.xyz"
+        password_req: "Mật khẩu không được để trống"
+        password: "Mật khẩu"
+        password_confirmation: "Nhập lại mật khẩu"
+        email: "Email"
+        name: "Họ và tên"
+        name_req: "Tên không được để trống"
+        already_account: "Đã có tài khoản"
+      edit:
+        unhappy: "Không hài lòng"
+        cancel_account: "Hủy tài khoản của tôi"
+        back: "Trờ lại"
+        update: "Cập nhập"
+        edit: "Chỉnh sửa"
+    shared:
+      links:
+        forgot_pass: "Quên mật khẩu?"
+        not_receive_confirmation_instructions: "Không nhận được hướng dẫn xác nhận?"
+        not_receive_unlock_instructions: "Không nhận được hướng dẫn mở khóa?"
+        sign_in_with: "Đăng nhập bằng"
+    
   sessions:
-    new:
-      email_req: "Định dạng email bắt buộc: ex@abc.xyz"
-      password_req: "Mật khẩu không được để trống"
-      password: "Mật khẩu"
-      email: "Email"
-      remember_me: "Lưu thông tin"
-      forgot_password: "Quên mật khẩu?"
-      logout: "Đăng xuất"
     create:
       login_success: "Đăng nhập thành công!!!"
       login_fail: "Đăng nhập thất bại!!!"

@@ -21,7 +21,7 @@
                 <li><%= link_to t(".vietnamese"), locale: :vi %></li>
               </ul>
             </div>
-            <% if logged_in? %>
+            <% if current_user.present? %>
               <div class="header__top__right__language">
                 <%= link_to current_user.fullname, current_user %>
                 <span class="arrow_carrot-down"></span>
@@ -41,6 +41,12 @@
                 <%= link_to login_path do %>
                   <i class="fa fa-user text-dark"></i>
                   <%= t(".login") %>
+                <% end %>
+              </div>
+              <div class="header__top__right__auth">
+                <%= link_to signup_path do %>
+                  <i class="fa fa-user text-dark"></i>
+                  <%= t(".sign_up") %>
                 <% end %>
               </div>
             <% end %>
