@@ -255,3 +255,5 @@ vi:
       total_price_item: "Tổng giá sản phẩm"
       close: "Đóng"
       total_price: "Tổng giá thanh toán"
+  cancan:
+    permission_denied: "Bạn không có quyền truy cập"

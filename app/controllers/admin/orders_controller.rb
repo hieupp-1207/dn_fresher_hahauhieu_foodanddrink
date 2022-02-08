@@ -1,6 +1,6 @@
 class Admin::OrdersController < Admin::BaseController
   include ActionView::Helpers::UrlHelper
-
+  authorize_resource
   before_action :find_order, :valid_status?, only: %i(update)
 
   def index

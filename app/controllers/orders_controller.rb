@@ -3,6 +3,7 @@ class OrdersController < ApplicationController
   before_action :check_invalid_order, only: %i(new create)
   before_action :build_order, :build_order_detail, only: :create
   before_action :find_order, only: :show
+  authorize_resource
 
   def new
     if current_cart.empty?

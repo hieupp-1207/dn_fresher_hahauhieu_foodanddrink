@@ -7,6 +7,7 @@ gem "autoprefixer-rails"
 gem "bcrypt", "~> 3.1.13"
 gem "bootsnap", ">= 1.4.4", require: false
 gem "bootstrap", "~> 4.6.0"
+gem "cancancan"
 gem "config"
 gem "devise", "~> 4.1"
 gem "enum_help"

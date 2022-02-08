@@ -258,3 +258,5 @@ en:
       total_price_item: "Total pricee item"
       close: "Close"
       total_price: "Total price"
+  cancan:
+    permission_denied: "You are not authorized to access this page."

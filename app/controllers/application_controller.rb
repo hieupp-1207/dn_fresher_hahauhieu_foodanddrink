@@ -1,6 +1,7 @@
 class ApplicationController < ActionController::Base
   before_action :set_locale, :load_cart
   before_action :configure_permitted_parameters, if: :devise_controller?
+  rescue_from CanCan::AccessDenied, with: :cancan_access_denied
 
   include SessionsHelper
   include Pagy::Backend
@@ -34,5 +35,10 @@ class ApplicationController < ActionController::Base
       :remember_me]
     devise_parameter_sanitizer.permit :sign_up, keys: added_attrs
     devise_parameter_sanitizer.permit :account_update, keys: added_attrs
+  end
+
+  def cancan_access_denied
+    flash[:danger] = t "cancan.permission_denied"
+    redirect_to root_url
   end
 end
