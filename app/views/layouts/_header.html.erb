@@ -31,7 +31,7 @@
                 </ul>
               </div>
               <div class="header__top__right__auth">
-                <%= link_to logout_path, method: :delete do %>
+                <%= button_to logout_path, method: :delete do %>
                   <i class="bi bi-box-arrow-left text-dark"></i>
                   <%= t(".logout") %>
                 <% end %>

@@ -69,6 +69,10 @@ vi:
         remember_me: "Lưu thông tin"
         forgot_password: "Quên mật khẩu?"
         logout: "Đăng xuất"
+      user:
+        signed_up: "Chào mừng bạn đến với OGANI."
+        signed_in: "Đăng nhập thành công."
+        signed_out: "Đăng xuất thành công." 
     registrations:
       new:
         email_req: "Định dạng email bắt buộc: ex@abc.xyz"
